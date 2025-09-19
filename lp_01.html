@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>アシロ少額短期保険</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="アシロ少額短期保険">
+  <link rel="stylesheet" href="https://bonobo-documents.s3.ap-northeast-1.amazonaws.com/cp/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="icon" href="https://asiro-ssi.com/favicon.ico" id="favicon">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://asiro-ssi.com/apple-touch-icon-180x180.png">
+</head>
+
+<body class="home">
+<!--ここから-->
+<div id="container">
+
+  <header>
+    <aside class="mainimg">
+      <img class="pc-img" src="https://bonobo-documents.s3.ap-northeast-1.amazonaws.com/cp/images/001.png">
+    </aside>    
+  </header>
+
+    
+    
+<section>
+<div class="intro1-ag-code">
+<table style="text-align: center;">
+<tbody>
+<tr>
+<td>
+<p>【募集代理店】</p>
+<p id="agent_name" class="ag_name mato-20 ma-bo15" style="margin-top: 5px;"></p>
+<small><p id="agent_address" class="mato-5"></p></small>
+<label for="agent_number">代理店番号：</label>
+<input id="agent_number" class="textbox-ag-number" name="agent_number" oninput="handleAgentInput()" pattern="^[A-Z0-9]+$" type="text" value="AG9999">
+</td>
+</tr>
+</tbody>
+</table>
+</div>  
+</section>
+    
+  <footer>
+    <small>
+      サービス提供元：株式会社アシロ　<br class="br-sp">　引受保険会社：株式会社アシロ少額短期保険<br>
+      Copyright 2025 ASiRO Small Amount and Short Term Insurance Co., Ltd.<br>
+      KL2025・SP・413（作成年月：2025年8月）<br>
+    </small>
+  </footer>
+
+</div>
+<!--/#container-->
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // スクロール時の固定ヘッダー・ページトップボタンの表示/非表示を制御
+    const offsetTop = 350;
+    const hysteresis = 50;
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+
+        if (scrollTop > offsetTop) {
+            document.body.classList.add('is-fixed-pagetop', 'is-fixed-head');
+        } else if (scrollTop < offsetTop - hysteresis) {
+            document.body.classList.remove('is-fixed-pagetop', 'is-fixed-head');
+        }
+    });
+
+    // モーダル設定関数
+    function setupModal(openBtnSelector, modalId) {
+        const openBtns = document.querySelectorAll(openBtnSelector);
+        const modal = document.getElementById(modalId);
+        if (!openBtns.length || !modal) return;
+
+        const closeBtn = modal.querySelector('.close-btn');
+
+        openBtns.forEach(openBtn => {
+            openBtn.addEventListener('click', e => {
+                e.preventDefault();
+                modal.style.display = 'flex';
+                modal.classList.add('open');
+                document.body.classList.add('modal-open');
+            });
+        });
+
+        function closeModal() {
+            modal.classList.remove('open');
+            modal.classList.add('close-animation');
+
+            modal.addEventListener('animationend', () => {
+                modal.style.display = 'none';
+                modal.classList.remove('close-animation');
+                document.body.classList.remove('modal-open');
+            }, { once: true });
+        }
+
+        closeBtn.addEventListener('click', e => {
+            e.preventDefault();
+            closeModal();
+        });
+
+        modal.addEventListener('click', e => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    }
+
+    // すべてのモーダルに同じ開閉ロジックを適用
+    // classセレクタを正しく修正しました
+    setupModal('.openPlanModal', 'plan'); 
+    setupModal('#openService1Modal', 'service1');
+    setupModal('#openService2Modal', 'service2');
+    setupModal('#openService3Modal', 'service3');
+    setupModal('#openService4Modal', 'service4');
+    setupModal('#openService5Modal', 'service5');
+    setupModal('#openTrouble1Modal', 'trouble1');
+    setupModal('#openTrouble2Modal', 'trouble2');
+    setupModal('#openTrouble3Modal', 'trouble3');
+    setupModal('#openTrouble4Modal', 'trouble4');
+    setupModal('#openTrouble5Modal', 'trouble5');
+    setupModal('#openTrouble6Modal', 'trouble6');
+    setupModal('#openTrouble7Modal', 'trouble7');
+    setupModal('#openTrouble8Modal', 'trouble8');
+    setupModal('#openTrouble9Modal', 'trouble9');
+    setupModal('#openTrouble10Modal', 'trouble10');
+    setupModal('#openTrouble11Modal', 'trouble11');
+    setupModal('#openTrouble12Modal', 'trouble12');
+    setupModal('#openTrouble13Modal', 'trouble13');
+    setupModal('#openTrouble14Modal', 'trouble14');
+    setupModal('#openTrouble15Modal', 'trouble15');
+    setupModal('#openTrouble16Modal', 'trouble16');
+    setupModal('#openTrouble17Modal', 'trouble17');
+    setupModal('#openTrouble18Modal', 'trouble18');
+});
+</script>  
+
+    <script>
+        // fetchAgents関数: 外部APIから代理店データを取得
+        async function fetchAgents() {
+            try {
+                const response = await fetch("https://asiro-ssi.viewer.kintoneapp.com/public/api/records/agent-number/1");
+                if (!response.ok) {
+                    throw new Error("データ取得に失敗しました");
+                }
+                const data = await response.json();
+                return data.records;
+            } catch (error) {
+                console.error("エラー:", error);
+                return [];
+            }
+        }
+
+        // handleAgentInput関数: 入力値に基づいて代理店情報を表示
+        async function handleAgentInput() {
+            const inputNumber = document.getElementById("agent_number").value.trim();
+            const agentNameElement = document.getElementById("agent_name");
+            const agentAddressElement = document.getElementById("agent_address");
+
+            if (inputNumber === "") {
+                agentNameElement.textContent = "";
+                agentAddressElement.textContent = "";
+                return;
+            }
+
+            const records = await fetchAgents();
+            const matchedAgent = records.find(record => record.Agency_No.value === inputNumber);
+
+            if (matchedAgent) {
+                agentNameElement.textContent = matchedAgent.officename.value;
+                agentAddressElement.textContent = matchedAgent.Address_S6.value;
+            } else {
+                agentNameElement.textContent = "該当する代理店が見つかりません";
+                agentAddressElement.textContent = "";
+            }
+        }
+
+        // ページ読み込み時に実行される処理
+        window.onload = function() {
+            // URLからagency_noパラメータを取得する
+            const urlParams = new URLSearchParams(window.location.search);
+            const agencyNoFromUrl = urlParams.get('agency_no');
+            
+            // クッキーから代理店番号を取得する関数
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+            const agencyNoFromCookie = getCookie("agency_no"); // クッキー名がagency_noと仮定
+            const agentNumberInput = document.getElementById("agent_number");
+
+            // 優先順位：URLパラメータ > クッキー > デフォルト値
+            if (agencyNoFromUrl) {
+                agentNumberInput.value = agencyNoFromUrl;
+            } else if (agencyNoFromCookie) {
+                agentNumberInput.value = agencyNoFromCookie;
+            } else {
+                // 初期値はHTMLの`value`属性に設定済みなので、ここでは何もしない
+            }
+            
+            // 最終的に設定された値で情報を表示する
+            handleAgentInput();
+        };
+    </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  new Swiper(".jirei-swiper", {
+    loop: false,
+    
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction", 
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints: {
+      // 769px以上のPC表示の場合
+      769: {
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+        spaceBetween: 20,
+      }
+    }
+  });
+});
+</script>
+
+<!--ここまで-->
+  
+  <p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+  <div class="nav-fix-pos-head">
+    <h1><a href="#">アシロ少額短期保険</a></h1>
+    <nav>
+      <ul>
+        <li><a href="#01">ABOUT US</a></li>
+        <li><a href="#02">SERVICE</a></li>
+        <li><a href="#03">NEWS</a></li>
+        <li><a href="#04">IR</a></li>
+        <li><a href="#05">CONTACT</a></li>
+        <li><a href="#06" class="init">LOGIN</a></li>
+      </ul>
+    </nav>
+  </div>
+
+</body>
+
+</html>
