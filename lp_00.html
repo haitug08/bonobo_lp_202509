@@ -60,7 +60,25 @@
   background-color: #f6f6f6;
   border-left: 3px solid #ffffff;
 }
-
+.plan-check ul {
+  list-style-type: none;
+}
+.plan-check li {
+  position: relative;
+  line-height: 1.8;
+}
+.plan-check li::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: .5em;
+  left: -1.5em;
+  width: 10px;
+  height: 5px;
+  border-left: 3px solid #9c9c9c;
+  border-bottom: 3px solid #9c9c9c;
+  transform: rotate(-45deg);
+}
 </style>
     
 </head>
@@ -173,15 +191,21 @@
     </tr>
     <tr>
       <th>弁護士費用<br>の補償</th>
-      <td>・法律相談料
-        <br>・着手金・手数料
-        <br><span style="opacity: 0.33;">・報酬金・日当・実費</span>
-      <td>・法律相談料
-        <br>・着手金・手数料
-        <br>・報酬金・日当・実費</td>
-      <td>・法律相談料
-        <br>・着手金・手数料
-        <br>・報酬金・日当・実費</td>
+      <td>
+        <div class="plan-check">
+        <ul><li>法律相談料</li><li>着手金・手数料</li><li><span style="opacity: 0.33;">報酬金・日当・実費</span></li></ul>
+        </div>
+      </td>
+      <td>
+        <div class="plan-check">
+        <ul><li>法律相談料</li><li>着手金・手数料</li><li>報酬金・日当・実費</span></li></ul>
+        </div>
+      </td>
+      <td>
+        <div class="plan-check">
+        <ul><li>法律相談料</li><li>着手金・手数料</li><li>報酬金・日当・実費</span></li></ul>
+        </div>
+      </td>
     </tr>
     <tr>
       <th>法務サービス</th>
