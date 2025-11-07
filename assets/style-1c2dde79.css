@@ -10,7 +10,7 @@ a:hover{opacity: 0.8;}
 .btn-secondary{background: #8DA5B2;color: #fff;}
 .pc{display: block;}
 .sp{display: none;}
-     
+
 /*nav*/
 .follow-nav {position: fixed;z-index: 99;top: 0; left: 0;width: 100%;height: 60px;color:#8DA5B2;text-align: center;transition: top 0.3s ease-in-out;display: flex;align-items: center;background: #fff;}
 .follow-nav.show {top: 0;}
@@ -26,15 +26,15 @@ a:hover{opacity: 0.8;}
 .follow-nav ul li a.btn-circle:before{display: block;position: absolute;top:50%;transform: translateY(-40%);left: -16px;width: 7px;height: 7px;border-radius: 3px;background: #8DA5B2;content: "";}
 .follow-nav ul li span.btn-circle:before{display: block;position: absolute;top:50%;transform: translateY(-40%);left: -16px;width: 7px;height: 7px;border-radius: 3px;background: #8DA5B2;content: "";}
 /* .follow-nav ul li a.btn-arrow:after{content:"" ;display: block;height: 1px;width: 100%;background: #8DA5B2;    position: absolute;bottom: -8px;} */
-.follow-nav ul li a.btn-arrow::before{content: "";background-image: url("/assets/img/icon_arrow-58d78bc0.svg");background-repeat: no-repeat;display: block;width: 15px;height: 12px;position: absolute;top:50%;transform: translateY(-50%);left: -20px;}
+.follow-nav ul li a.btn-arrow::before{content: "";background-image: url(/img/icon_arrow.svg);background-repeat: no-repeat;display: block;width: 15px;height: 12px;position: absolute;top:50%;transform: translateY(-50%);left: -20px;}
 .etc .follow-nav{top:0;}
 
 body.etc{padding-top:93px;}
 section#content{min-height:calc(100% - 482px);position: relative;}
 
-/* 縺昴�莉悶�繝ｼ繧ｸ縺ｮ繝翫ン縺ｮ繧ｹ繧ｿ繧､繝ｫ */
+/* その他ページのナビのスタイル */
 .subpage .follow-nav {
-  background-color: #F9F9F9; /* 竊� 縺薙％繧帝城℃縺ｪ縺励�繧ｫ繝ｩ繝ｼ縺ｫ */
+  background-color: #F9F9F9; /* ← ここを透過なしのカラーに */
   color: #8DA5B2;
 }
 
@@ -77,7 +77,7 @@ h2.top-header>p>.sub:before{display: block;position: absolute;top:8px;left: 3px;
 
 #catch{display: flex;
   position: relative;
-  justify-content: center;align-items: center;width: 100%;aspect-ratio:100/50;background-color: transparent;background-image: url("/assets/img/bg_catch-56262a1b.svg");background-size: 100%;background-position: bottom;background-repeat: no-repeat;}
+  justify-content: center;align-items: center;width: 100%;aspect-ratio:100/50;background-color: transparent;background-image: url(/img/bg_catch.svg);background-size: 100%;background-position: bottom;background-repeat: no-repeat;}
 #catch:after {
     content: "";
     width: 100%;
@@ -116,7 +116,7 @@ h2.top-header>p>.sub:before{display: block;position: absolute;top:8px;left: 3px;
   width: 55px;
   height: 55px;
   display: block;
-  background-image: url("/assets/img/img_aboutplus-a535edbe.svg");
+  background-image: url(/img/img_aboutplus.svg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -126,7 +126,7 @@ h2.top-header>p>.sub:before{display: block;position: absolute;top:8px;left: 3px;
 #top-about .about-list>li{
   width: 380px;
   height: 365px;
-  background-image: url("/assets/img/bg_about_list-1a9bffb8.svg");
+  background-image: url(/img/bg_about_list.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
@@ -269,7 +269,7 @@ h2.top-header>p>.sub:before{display: block;position: absolute;top:8px;left: 3px;
   flex-wrap: wrap;
 }
 #top-feature .point0 .content ul>li{width: 48%;position: relative;}
-#top-feature .point0 .content ul>li:first-child::after{position: absolute;content: "";width: 13px;height: 13px;background: url("/assets/img/icon_plus-f4839cbe.svg");background-repeat: no-repeat;top: 50%;right: -21px;}
+#top-feature .point0 .content ul>li:first-child::after{position: absolute;content: "";width: 13px;height: 13px;background: url(/img/icon_plus.svg);background-repeat: no-repeat;top: 50%;right: -21px;}
 #top-feature .point0 .content ul>li>img{width: 100%;}
 #top-feature .point0 .content>p.caution{
   width: calc(50% - 9px);
@@ -1115,9 +1115,9 @@ footer ul.fnav1 li{
 .process {
   display: flex;
   justify-content: center;
-  /* 豌ｴ蟷ｳ譁ｹ蜷代�荳ｭ螟ｮ謠�∴ */
+  /* 水平方向の中央揃え */
   align-items: center;
-  /* 蝙ら峩譁ｹ蜷代�荳ｭ螟ｮ謠�∴ */
+  /* 垂直方向の中央揃え */
   font-weight: 700;
   font-size: 20px;
   color: #E0E6E6;
@@ -1134,9 +1134,9 @@ footer ul.fnav1 li{
   content: "";
   position: absolute;
   width: 72px;
-  /* 邱壹�髟ｷ縺輔ｒ隱ｿ謨ｴ */
+  /* 線の長さを調整 */
   height: 2px;
-  /* 邱壹�螟ｪ縺� */
+  /* 線の太さ */
   background-color: #E0E6E6;
   top: 50%;
   left: 100%;
@@ -1200,39 +1200,39 @@ footer ul.fnav1 li{
 
 
 .fixed-top-alert {
-  /* 笆ｼ笆ｼ笆ｼ 菴咲ｽｮ繧貞崋螳壹＠縲∽ｸｭ螟ｮ縺ｫ驟咲ｽｮ縺吶ｋ縺溘ａ縺ｮ險ｭ螳� 笆ｼ笆ｼ笆ｼ */
-  position: fixed;            /* 逕ｻ髱｢縺ｫ菴咲ｽｮ繧貞崋螳壹☆繧� */
-  top: 20px;                  /* 逕ｻ髱｢縺ｮ荳翫°繧峨�霍晞屬 */
-  left: 50%;                  /* 逕ｻ髱｢縺ｮ蟾ｦ縺九ｉ50%縺ｮ菴咲ｽｮ縺ｫ驟咲ｽｮ */
-  transform: translateX(-50%); /* 隕∫ｴ�縺ｮ蟷��蜊雁�縺�縺大ｷｦ縺ｫ縺壹ｉ縺励∽ｸｭ螟ｮ謠�∴繧貞ｮ梧�縺輔○繧� */
-  z-index: 1000;              /* 莉悶�隕∫ｴ�繧医ｊ謇句燕縺ｫ陦ｨ遉ｺ縺吶ｋ */
+  /* ▼▼▼ 位置を固定し、中央に配置するための設定 ▼▼▼ */
+  position: fixed;            /* 画面に位置を固定する */
+  top: 20px;                  /* 画面の上からの距離 */
+  left: 50%;                  /* 画面の左から50%の位置に配置 */
+  transform: translateX(-50%); /* 要素の幅の半分だけ左にずらし、中央揃えを完成させる */
+  z-index: 1000;              /* 他の要素より手前に表示する */
     
-    /* 笆ｼ笆ｼ笆ｼ 隕九◆逶ｮ繧呈紛縺医ｋ險ｭ螳� 笆ｼ笆ｼ笆ｼ */
+    /* ▼▼▼ 見た目を整える設定 ▼▼▼ */
   padding: 1rem;
   border-radius: 0.25rem;
   color: #721c24;
   background-color: #f8d7da;
   border: 1px solid #f5c6cb;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 蠖ｱ繧剃ｻ倥￠縺ｦ豬ｮ縺九�荳翫′繧峨○繧� */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を付けて浮かび上がらせる */
 }
 
 .Required::after {
-  content: "蠢���";
-  /* 謫ｬ莨ｼ隕∫ｴ�縺ｫ陦ｨ遉ｺ縺吶ｋ繝�く繧ｹ繝� */
+  content: "必須";
+  /* 擬似要素に表示するテキスト */
   display: inline-block;
   background-color: #D6753D;
-  /* 閭梧勹濶ｲ */
+  /* 背景色 */
   color: white;
-  /* 譁�ｭ苓牡 */
+  /* 文字色 */
   font-weight: 600;
   font-size: 14px;
-  /* 譁�ｭ励し繧､繧ｺ */
+  /* 文字サイズ */
   padding: 4px 4px;
-  /* 菴咏區 */
+  /* 余白 */
   margin-left: 10px;
-  /* 譁�ｭ励→縺ｮ髢馴囈 */
+  /* 文字との間隔 */
   vertical-align: middle;
-  /* 邵ｦ菴咲ｽｮ隱ｿ謨ｴ */
+  /* 縦位置調整 */
   position: absolute;
   top: 1px;
 }
@@ -1329,7 +1329,7 @@ footer ul.fnav1 li{
   line-height: 1.5;
 }
 
-/* 繝ｩ繧ｸ繧ｪ繝懊ち繝ｳ繧ｫ繧ｹ繧ｿ繝槭う繧ｺ */
+/* ラジオボタンカスタマイズ */
 
 #contact .radio-3 {
   display: flex;
@@ -1371,7 +1371,7 @@ footer ul.fnav1 li{
   color: #fff;
 }
 
-/* 蠕捺･ｭ蜩｡謨ｰ逕ｨ繝ｩ繧ｸ繧ｪ繝懊ち繝ｳ */
+/* 従業員数用ラジオボタン */
 #contact .radio-6 {
   display: block;
   width: 100%;
@@ -1405,7 +1405,7 @@ footer ul.fnav1 li{
   color: #fff;
 }
 
-/* 繧ｻ繝ｬ繧ｯ繝医�繝�け繧ｹ繧ｫ繧ｹ繧ｿ繝槭う繧ｺ */
+/* セレクトボックスカスタマイズ */
 
 .selectbox-1 {
   display: flex;
@@ -1413,13 +1413,13 @@ footer ul.fnav1 li{
   position: relative;
 }
 
-/* 謫ｬ莨ｼ隕∫ｴ�縺ｧ荳芽ｧ偵�SVG逕ｻ蜒上ｒ蜈･繧後ｋ */
+/* 擬似要素で三角のSVG画像を入れる */
 .selectbox-1::after {
   position: absolute;
   right: 15px;
   width: 20px;
   height: 17px;
-  background-image: url("/assets/img/img_triangle-4c69ad57.svg");
+  background-image: url('/img/img_triangle.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -1448,21 +1448,21 @@ footer ul.fnav1 li{
   margin-bottom: 75px;
 }
 
-/* 繝医Λ繝悶Ν縺ｫ髢｢縺吶ｋ蜻顔衍繝ｩ繧ｸ繧ｪ繝懊ち繝ｳ */
+/* トラブルに関する告知ラジオボタン */
 
 #contact .trouble-radio {
   display: flex;
-  /* 讓ｪ荳ｦ縺ｳ */
+  /* 横並び */
   justify-content: center;
-  /* 讓ｪ譁ｹ蜷代�荳ｭ螟ｮ蟇�○ */
+  /* 横方向の中央寄せ */
   align-items: center;
-  /* 邵ｦ譁ｹ蜷代�荳ｭ螟ｮ蟇�○ */
+  /* 縦方向の中央寄せ */
   width: max-content;
-  /* 荳ｭ霄ｫ縺ｫ蠢懊§縺溷ｹ� */
+  /* 中身に応じた幅 */
   margin: 0 auto 47px;
-  /* 逕ｻ髱｢荳ｭ螟ｮ縺ｸ驟咲ｽｮ */
+  /* 画面中央へ配置 */
   gap: 20px;
-  /* 繝ｩ繧ｸ繧ｪ繝懊ち繝ｳ縺ｮ髢馴囈 */
+  /* ラジオボタンの間隔 */
 }
 
 #contact .trouble-radio label {
@@ -1549,7 +1549,7 @@ footer ul.fnav1 li{
 #contact .trouble-btn-wrap {
   display: flex;
   justify-content: center;
-  /* 繝懊ち繝ｳ蜈ｨ菴薙ｒ荳ｭ螟ｮ蟇�○ */
+  /* ボタン全体を中央寄せ */
   align-items: center;
   gap: 15px;
   width: 100%;
@@ -1557,13 +1557,13 @@ footer ul.fnav1 li{
 
 
 
-/* 繝懊ち繝ｳ蜀��陦ｨ遉ｺ繧断lex縺ｫ縺励※繧｢繧､繧ｳ繝ｳ縺ｨ繝�く繧ｹ繝医ｒ讓ｪ荳ｦ縺ｳ��ｸｭ螟ｮ謠�∴ */
+/* ボタン内の表示をflexにしてアイコンとテキストを横並び＆中央揃え */
 #contact .addition-btn,
 #contact .delete-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3px; /* 繧｢繧､繧ｳ繝ｳ縺ｨ繝�く繧ｹ繝医�髢馴囈��margin-right縺ｮ莉｣繧上ｊ�� */
+  gap: 3px; /* アイコンとテキストの間隔（margin-rightの代わり） */
   font-size: 17px;
   color: #fff;
   width: 100%;
@@ -1578,7 +1578,7 @@ footer ul.fnav1 li{
   background-color: #7995A3;
 }
 
-/* 謫ｬ莨ｼ隕∫ｴ��医い繧､繧ｳ繝ｳ�峨ｒflex繧｢繧､繝�Β縺ｨ縺励※邵ｦ荳ｭ螟ｮ縺ｫ謠�∴繧� */
+/* 擬似要素（アイコン）をflexアイテムとして縦中央に揃える */
 #contact .addition-btn::before,
 #contact .delete-btn::before {
   content: "";
@@ -1586,24 +1586,24 @@ footer ul.fnav1 li{
   display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;
-  flex-shrink: 0; /* 繧｢繧､繧ｳ繝ｳ縺ｮ繧ｵ繧､繧ｺ繧堤ｸｮ繧√↑縺� */
+  flex-shrink: 0; /* アイコンのサイズを縮めない */
 }
 
 #contact .addition-btn::before {
-  height: 18px; /* 竊� 鬮倥＆繧偵ユ繧ｭ繧ｹ繝医→蜷医ｏ縺帙※蟆代＠荳九￡繧� */
-  background-image: url("/assets/img/img_plus-mark-24a9d411.svg");
+  height: 18px; /* ← 高さをテキストと合わせて少し下げる */
+  background-image: url(/img/img_plus-mark.svg);
 }
 
 #contact .delete-btn::before {
   height: 4px;
-  background-image: url("/assets/img/img_minus-mark-45a290e8.svg");
+  background-image: url(/img/img_minus-mark.svg);
 }
 
 
 
 #select option[disabled] {
   color: #92A4B1;
-  /* 蛻晄悄縺ｮ縲碁∈謚槭＠縺ｦ縺上□縺輔＞縲阪�譁�ｭ苓牡繧定埋縺�牡縺ｫ */
+  /* 初期の「選択してください」の文字色を薄い色に */
 }
 
 #contact .selectbox-w1 {
@@ -1614,7 +1614,7 @@ footer ul.fnav1 li{
   width: 47%;
 }
 
-/* 逕溷ｹｴ譛域律 */
+/* 生年月日 */
 .datebarth-wrap {
   display: flex;
   align-items: center;
@@ -1637,7 +1637,7 @@ footer ul.fnav1 li{
   margin-right: 15px;
 }
 
-/* 菴乗園讀懃ｴ｢繝懊ち繝ｳ */
+/* 住所検索ボタン */
 
 #contact .address-warp {
   display: flex;
@@ -1657,9 +1657,9 @@ footer ul.fnav1 li{
   margin-left: 30px;
 }
 
-/* 蛟倶ｺｺ諠��ｱ菫晁ｭｷ譁ｹ驥昴懈ｬ｡縺ｸ */
+/* 個人情報保護方針〜次へ */
 
-/* 蟾ｦ蟇�○逕ｨ */
+/* 左寄せ用 */
 .pb-next-l {
   display: block;
   margin-top: 50px;
@@ -1668,13 +1668,13 @@ footer ul.fnav1 li{
   width: fit-content;
 }
 
-/* 逵溘ｓ荳ｭ蟇�○逕ｨ */
+/* 真ん中寄せ用 */
 .pb-next-center {
   width: fit-content;
   margin: 50px auto 190px; 
 }
 
-/* 蜿ｳ蟇�○逕ｨ */
+/* 右寄せ用 */
 .pb-next-r {
   display: block;
   margin-top: 50px;
@@ -1713,7 +1713,7 @@ footer ul.fnav1 li{
   cursor: pointer;
 }
 
-/* 繧ｫ繧ｹ繧ｿ繝�繝√ぉ繝�け繝懊ャ繧ｯ繧ｹ */
+/* カスタムチェックボックス */
 #contact .privacy-policy-cb .checkbox-custom {
   width: 30px;
   height: 30px;
@@ -1723,10 +1723,10 @@ footer ul.fnav1 li{
   position: relative;
   display: inline-block;
   pointer-events: none;
-  /* 繧ｯ繝ｪ繝�け繧貞ｦｨ縺偵↑縺� */
+  /* クリックを妨げない */
 }
 
-/* 繝√ぉ繝�け繝槭�繧ｯ */
+/* チェックマーク */
 #contact .privacy-policy-cb input:checked+.checkbox-custom::after {
   position: absolute;
   top: 2px;
@@ -1739,19 +1739,19 @@ footer ul.fnav1 li{
   content: '';
 }
 
-/* 譛ｬ譚･縺ｮ繝√ぉ繝�け繝懊ャ繧ｯ繧ｹ繧帝撼陦ｨ遉ｺ */
+/* 本来のチェックボックスを非表示 */
 #contact .privacy-policy-cb input {
   clip-path: inset(50%);
   position: absolute;
 }
 
-/* 谺｡縺ｸ繝懊ち繝ｳ */
+/* 次へボタン */
 .next-btn {
   width: 300px;
   background: #E57016;
   border-radius: 7px;
   text-align: center;
-  padding: 0; /* 竊� padding繧偵Μ繧ｻ繝�ヨ */
+  padding: 0; /* ← paddingをリセット */
 }
 
 .next-btn-4-confirm {
@@ -1759,16 +1759,16 @@ footer ul.fnav1 li{
   background: #E57016;
   border-radius: 7px;
   text-align: center;
-  padding: 0; /* 竊� padding繧偵Μ繧ｻ繝�ヨ */
+  padding: 0; /* ← paddingをリセット */
 }
 
 .next-btn button {
-  all: unset; /* 竊� 繝悶Λ繧ｦ繧ｶ縺ｮ繝�ヵ繧ｩ繝ｫ繝医せ繧ｿ繧､繝ｫ繧偵Μ繧ｻ繝�ヨ */
+  all: unset; /* ← ブラウザのデフォルトスタイルをリセット */
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 40px; /* 繝懊ち繝ｳ縺ｮ鬮倥＆隱ｿ謨ｴ�郁�逕ｱ縺ｫ螟画峩OK�� */
+  height: 40px; /* ボタンの高さ調整（自由に変更OK） */
   font-weight: 300;
   font-size: 18px;
   color: #fff;
@@ -1776,12 +1776,12 @@ footer ul.fnav1 li{
 }
 
 .next-btn-4-confirm button {
-  all: unset; /* 竊� 繝悶Λ繧ｦ繧ｶ縺ｮ繝�ヵ繧ｩ繝ｫ繝医せ繧ｿ繧､繝ｫ繧偵Μ繧ｻ繝�ヨ */
+  all: unset; /* ← ブラウザのデフォルトスタイルをリセット */
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 40px; /* 繝懊ち繝ｳ縺ｮ鬮倥＆隱ｿ謨ｴ�郁�逕ｱ縺ｫ螟画峩OK�� */
+  height: 40px; /* ボタンの高さ調整（自由に変更OK） */
   font-weight: 300;
   font-size: 18px;
   color: #fff;
@@ -1793,16 +1793,16 @@ footer ul.fnav1 li{
   background: #00A0BD;
   border-radius: 7px;
   text-align: center;
-  padding: 0; /* 竊� padding繧偵Μ繧ｻ繝�ヨ */
+  padding: 0; /* ← paddingをリセット */
 }
 
 .next-btn-blue button {
-  all: unset; /* 竊� 繝悶Λ繧ｦ繧ｶ縺ｮ繝�ヵ繧ｩ繝ｫ繝医せ繧ｿ繧､繝ｫ繧偵Μ繧ｻ繝�ヨ */
+  all: unset; /* ← ブラウザのデフォルトスタイルをリセット */
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 40px; /* 繝懊ち繝ｳ縺ｮ鬮倥＆隱ｿ謨ｴ�郁�逕ｱ縺ｫ螟画峩OK�� */
+  height: 40px; /* ボタンの高さ調整（自由に変更OK） */
   font-weight: 300;
   font-size: 18px;
   color: #fff;
@@ -1810,7 +1810,7 @@ footer ul.fnav1 li{
 }
 
 
-/* 繝励Λ繝ｳ縺ｮ驕ｸ謚槭�繝ｼ繧ｸ */
+/* プランの選択ページ */
 
 #contact .plan-wrap {
   width: 100%;
@@ -1853,11 +1853,11 @@ st-plan {
 
 .plan-content {
   width: fit-content;
-  /* 荳ｭ霄ｫ縺ｫ蜷医ｏ縺帙◆蟷�↓縺吶ｋ */
+  /* 中身に合わせた幅にする */
   margin: 0 auto;
-  /* 隕ｪ隕∫ｴ�蜀�〒蟾ｦ蜿ｳ荳ｭ螟ｮ縺ｫ驟咲ｽｮ */
+  /* 親要素内で左右中央に配置 */
   text-align: left;
-  /* 譁�ｭ励�蟾ｦ謠�∴ */
+  /* 文字は左揃え */
 }
 
 
@@ -2027,7 +2027,7 @@ st-plan {
   margin-left: 20px;
 }
 
-/* 豎ｺ貂域婿豕輔Λ繧ｸ繧ｪ繝懊ち繝ｳ */
+/* 決済方法ラジオボタン */
 
 #contact .payment {
   font-weight: 500;
@@ -2093,7 +2093,7 @@ st-plan {
   text-underline-offset: 0.1em;
 }
 
-/* 豎ｺ貂医�繝ｼ繧ｸ繝��繝悶Ν */
+/* 決済ページテーブル */
 
 .formtable-3 {
   margin-bottom: 80px;
@@ -2163,7 +2163,7 @@ td {
   margin: 46px 0 58px;
 }
 
-/* 豎ｺ貂域婿豕暮∈謚槭↓謌ｻ繧九�繧ｿ繝ｳ */
+/* 決済方法選択に戻るボタン */
 .return-btn {
   display: block;
   width: 298px;
@@ -2198,7 +2198,7 @@ td {
   width: 100%;
 }
 
-/* 豎ｺ貂域婿豕輔�繝��繧｢繝��逕ｻ髱｢ */
+/* 決済方法ポップアップ画面 */
 
 .popup-bg {
   background-color: #F9F9F9;  
@@ -2338,13 +2338,13 @@ td {
   margin-top: 30px;
 }
 
-/* 繧｢繧ｳ繝ｼ繝�ぅ繧ｪ繝ｳ */
+/* アコーディオン */
 .toggle {
   display: none;
 }
 
 .toggle-title {
-  /*繧ｿ繧､繝医Ν*/
+  /*タイトル*/
   display: block;
   padding-right: 30px;
 }
@@ -2354,7 +2354,7 @@ td {
 }
 
 .toggle-title::after {
-  /*繧ｿ繧､繝医Ν讓ｪ縺ｮ遏｢蜊ｰ*/
+  /*タイトル横の矢印*/
   content: "";
   width: 19px;
   height: 19px;
@@ -2362,7 +2362,7 @@ td {
   border-right: 1px solid #707070;
   -webkit-transform: rotate(45deg);
   margin-left: 20px;
-  /* 譁�ｭ励→縺ｮ髢馴囈 */
+  /* 文字との間隔 */
   position: absolute;
   top: calc(50% - 15px);
   transform: rotate(135deg);
@@ -2377,7 +2377,7 @@ td {
 }
 
 .acordion-item {
-  /*譛ｬ譁�*/
+  /*本文*/
   font-size: 15px;
   line-height: 25px;
   color: #8DA5B2;
@@ -2389,7 +2389,7 @@ td {
 }
 
 .toggle:checked+.toggle-title+.acordion-item {
-  /*髢矩哩譎�*/
+  /*開閉時*/
   height: auto;
   padding: 20px;
   transition: all .3s;
@@ -2401,7 +2401,7 @@ td {
 }
 
 
-/* 縺顔筏縺苓ｾｼ縺ｿ蜀�ｮｹ縺ｮ遒ｺ隱阪�繝ｼ繧ｸ */
+/* お申し込み内容の確認ページ */
 
 #contact .fw-w6 th {
   font-weight: 600;
@@ -2420,7 +2420,7 @@ td {
 }
 
 
-/* PDF縺ｮ蜀�ｮｹ遒ｺ隱阪∝酔諢上メ繧ｧ繝�け繝懊ャ繧ｯ繧ｹ */
+/* PDFの内容確認、同意チェックボックス */
 
 #contact .pdf-consent {
   font-size: 24px;
@@ -2451,7 +2451,7 @@ td {
   cursor: pointer;
 }
 
-/* 繧ｫ繧ｹ繧ｿ繝�繝√ぉ繝�け繝懊ャ繧ｯ繧ｹ */
+/* カスタムチェックボックス */
 #contact .pdf-consent .checkbox-custom {
   width: 24px;
   height: 24px;
@@ -2460,10 +2460,10 @@ td {
   position: relative;
   display: inline-block;
   pointer-events: none;
-  /* 繧ｯ繝ｪ繝�け繧貞ｦｨ縺偵↑縺� */
+  /* クリックを妨げない */
 }
 
-/* 繝√ぉ繝�け繝槭�繧ｯ */
+/* チェックマーク */
 #contact .pdf-consent-cb input:checked+.checkbox-custom::after {
   position: absolute;
   top: 1px;
@@ -2476,14 +2476,14 @@ td {
   content: '';
 }
 
-/* 譛ｬ譚･縺ｮ繝√ぉ繝�け繝懊ャ繧ｯ繧ｹ繧帝撼陦ｨ遉ｺ */
+/* 本来のチェックボックスを非表示 */
 #contact .pdf-consent-cb input {
   clip-path: inset(50%);
   position: absolute;
 }
 
 
-/* 逕ｳ縺苓ｾｼ縺ｿ邨檎ｷｯ繝��繝悶Ν */
+/* 申し込み経緯テーブル */
 
 .formtable-4 {
   margin-bottom: 77px;
@@ -2514,27 +2514,27 @@ table.formtable-4 p.ag_address {
   margin-top: 5px !important;
 }
 
-/* 繝｢繝ｼ繝繝ｫ縺ｨ閭梧勹縺ｮ謖�ｮ� */
+/* モーダルと背景の指定 */
 .modal {
-  position: fixed; /* 霑ｽ蜉� */
+  position: fixed; /* 追加 */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   text-align: center;
-  background: rgba(0,0,0,0.5); /* 騾城℃縺ｮ繧ｫ繝ｳ繝樔ｽ咲ｽｮ菫ｮ豁｣ */
+  background: rgba(0,0,0,0.5); /* 透過のカンマ位置修正 */
   padding: 50px 20px;
   overflow: auto;
   opacity: 0;
   visibility: hidden;
   transition: .3s;
   box-sizing: border-box;
-  display: flex; /* 霑ｽ蜉� */
-  justify-content: center; /* 霑ｽ蜉� */
-  z-index: 9999; /* 莉悶�隕∫ｴ�繧医ｊ蜑埼擇縺ｫ縺吶ｋ */
+  display: flex; /* 追加 */
+  justify-content: center; /* 追加 */
+  z-index: 9999; /* 他の要素より前面にする */
 }
 
-/* 繝｢繝ｼ繝繝ｫ縺ｮ謫ｬ莨ｼ隕∫ｴ�縺ｮ謖�ｮ� */
+/* モーダルの擬似要素の指定 */
 .modal:before{
   content: "";
   display: inline-block;
@@ -2543,13 +2543,13 @@ table.formtable-4 p.ag_address {
   margin-left: -0.2em;
 }
 
-/* 繧ｯ繝ｩ繧ｹ縺瑚ｿｽ蜉�縺輔ｌ縺滓凾縺ｮ謖�ｮ� */
+/* クラスが追加された時の指定 */
 .modal.is-active{
   opacity: 1;
   visibility: visible;
 }
 
-/* 繝｢繝ｼ繝繝ｫ蜀��縺ｮ謖�ｮ� */
+/* モーダル内側の指定 */
 .modal-container{
   position: relative;
   display: inline-block;
@@ -2558,7 +2558,7 @@ table.formtable-4 p.ag_address {
   width: 90%;
 }
 
-/* 繝｢繝ｼ繝繝ｫ繧帝哩縺倥ｋ繝懊ち繝ｳ縺ｮ謖�ｮ� */
+/* モーダルを閉じるボタンの指定 */
 .modal-close{
   position: absolute;
   display: flex;
@@ -2574,7 +2574,7 @@ table.formtable-4 p.ag_address {
   cursor: pointer;
 }
 
-/* 繝｢繝ｼ繝繝ｫ縺ｮ繧ｳ繝ｳ繝�Φ繝�Κ蛻��謖�ｮ� */
+/* モーダルのコンテンツ部分の指定 */
 .modal-content{
   background: #fff;
   text-align: left;
@@ -2583,7 +2583,7 @@ table.formtable-4 p.ag_address {
   box-sizing: border-box;
 }
 
-/* 繝｢繝ｼ繝繝ｫ縺ｮ繧ｳ繝ｳ繝�Φ繝�Κ蛻��繝�く繧ｹ繝医�謖�ｮ� */
+/* モーダルのコンテンツ部分のテキストの指定 */
 .modal-content li,
 .modal-content p{
   font-family: "Zen Kaku Gothic New", serif;
@@ -2593,12 +2593,12 @@ table.formtable-4 p.ag_address {
 
 .modal-content ol {
   list-style: decimal;
-  padding-left: 1.5em; /* 繧､繝ｳ繝�Φ繝郁ｪｿ謨ｴ�亥ｿ�ｦ√↓蠢懊§縺ｦ�� */
+  padding-left: 1.5em; /* インデント調整（必要に応じて） */
 }
 
 .modal-content ul {
   list-style: circle;
-  padding-left: 1.5em; /* 繧､繝ｳ繝�Φ繝郁ｪｿ謨ｴ�亥ｿ�ｦ√↓蠢懊§縺ｦ�� */
+  padding-left: 1.5em; /* インデント調整（必要に応じて） */
 }
 
 
@@ -2623,13 +2623,13 @@ table.formtable-4 p.ag_address {
 }
 
 .agree-btn:disabled {
-  background-color: #cccccc; /* 轣ｰ濶ｲ */
+  background-color: #cccccc; /* 灰色 */
   cursor: not-allowed;
   opacity: 0.7;
 }
 
 #complete-btn:disabled {
-  background-color: #cccccc; /* 轣ｰ濶ｲ */
+  background-color: #cccccc; /* 灰色 */
   cursor: not-allowed;
   opacity: 0.7;
 }
@@ -2670,17 +2670,17 @@ table.formtable-4 p.ag_address {
   margin: 0;
 	margin-bottom: 20px;
 	font-weight: normal;
-	border-bottom: 4px solid #eee;	/*荳狗ｷ壹�蟷�∫ｷ夂ｨｮ縲∬牡縲ゅ�繝ｼ繧ｹ繧ｫ繝ｩ繝ｼ縺ｧ縺吶ゆｸ九�span縺ｮborder-bottom縺ｨ謨ｰ蟄励ｒ蜷医ｏ縺帙※縺翫￥縲�*/
+	border-bottom: 4px solid #eee;	/*下線の幅、線種、色。ベースカラーです。下のspanのborder-bottomと数字を合わせておく。*/
 }
 
 .modal-title span.uline {
 	display: inline-block;position: relative;
-	border-bottom: 4px solid #0090B0;	/*荳狗ｷ壹�蟷�∫ｷ夂ｨｮ縲∬牡縲ゅい繧ｯ繧ｻ繝ｳ繝医き繝ｩ繝ｼ縺ｧ縺吶ゆｸ翫�main h2縺ｨ謨ｰ蟄励ｒ蜷医ｏ縺帙※縺翫￥縲�*/
-	bottom: -4px;		/*荳九°繧峨�驟咲ｽｮ蝣ｴ謇謖�ｮ壹ゆｸ翫↓縺ゅｋ�偵▽縺ｮborder-bottom縺ｨ驥阪�繧狗ぜ縺ｮ謖�ｮ壹↑縺ｮ縺ｧ縲∵焚蟄励ｒ蜷医ｏ縺帙※縺九ｉ蜀帝�ｭ縺ｫ繝槭う繝翫せ繧偵▽縺代※荳九＆縺��*/
-	padding: 0 20px;	/*荳贋ｸ九∝ｷｦ蜿ｳ縺ｸ縺ｮ菴咏區縲ゅユ繧ｭ繧ｹ繝医�荳｡閼�↓蟆代＠菴呵｣輔ｒ繧ゅ▲縺ｦ邱壹ｒ蠑輔￥縺溘ａ縺ｧ縺吶�*/
+	border-bottom: 4px solid #0090B0;	/*下線の幅、線種、色。アクセントカラーです。上のmain h2と数字を合わせておく。*/
+	bottom: -4px;		/*下からの配置場所指定。上にある２つのborder-bottomと重ねる為の指定なので、数字を合わせてから冒頭にマイナスをつけて下さい。*/
+	padding: 0 20px;	/*上下、左右への余白。テキストの両脇に少し余裕をもって線を引くためです。*/
 }
 
-/* 繧ｵ繝ｳ繧ｯ繧ｹ繝壹�繧ｸ */
+/* サンクスページ */
 #contact .thanks-text {
   font-size: 20px;
   line-height: 34px;
@@ -2696,7 +2696,7 @@ table.formtable-4 p.ag_address {
   margin-top: 204px;
 }
 
-/* bonobo縺皮ｴｹ莉玖ｳ�侭繝繧ｦ繝ｳ繝ｭ繝ｼ繝峨�繝ｼ繧ｸ */
+/* bonoboご紹介資料ダウンロードページ */
 .download-title {
   font-family: "Zen Kaku Gothic New", sans-seri;
   font-size: 20px;
@@ -2706,12 +2706,12 @@ table.formtable-4 p.ag_address {
   margin: 204px 25px 66px;
 }
 
-/* 繝代�繝医リ繝ｼ蜍滄寔繝壹�繧ｸ */
+/* パートナー募集ページ */
 .ma-center {
   margin: 0 auto;
 }
 
-/* 笆ｼ 蜈ｱ騾夲ｼ壹Λ繝吶Ν繝悶Ο繝�け */
+/* ▼ 共通：ラベルブロック */
 .input-label {
   display: flex;
   flex-direction: column;
@@ -2719,7 +2719,7 @@ table.formtable-4 p.ag_address {
   color: #333;
 }
 
-/* 笆ｼ 蜈ｱ騾夲ｼ喨nput譛ｬ菴� */
+/* ▼ 共通：input本体 */
 .ws {
   background-color: #fff;
   border: 1px solid #ccc;
@@ -2733,13 +2733,13 @@ table.formtable-4 p.ag_address {
   max-width: 200px;
 }
 
-/* 笆ｼ PC迚茨ｼ壽ｨｪ荳ｦ縺ｳ繝ｻ繝ｩ繝吶Ν縺ｨinput縺ｮ邵ｦ菴咲ｽｮ謠�∴ */
+/* ▼ PC版：横並び・ラベルとinputの縦位置揃え */
 @media screen and (min-width: 768px) {
   .callback-wrap {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    align-items: center; /* 竊� 繝ｩ繝吶Ν縺ｨinput繧堤ｸｦ荳ｭ螟ｮ縺ｫ謠�∴繧� */
+    align-items: center; /* ← ラベルとinputを縦中央に揃える */
   }
 
   .callback-wrap .input-label {
@@ -2761,22 +2761,22 @@ table.formtable-4 p.ag_address {
 }
 
 .discretionary::after {
-  content: "莉ｻ諢�";
-  /* 謫ｬ莨ｼ隕∫ｴ�縺ｫ陦ｨ遉ｺ縺吶ｋ繝�く繧ｹ繝� */
+  content: "任意";
+  /* 擬似要素に表示するテキスト */
   display: inline-block;
   background-color: #A8BAC1;
-  /* 閭梧勹濶ｲ */
+  /* 背景色 */
   color: white;
-  /* 譁�ｭ苓牡 */
+  /* 文字色 */
   font-weight: 600;
   font-size: 16px;
-  /* 譁�ｭ励し繧､繧ｺ */
+  /* 文字サイズ */
   padding: 4px 4px;
-  /* 菴咏區 */
+  /* 余白 */
   margin-left: 10px;
-  /* 譁�ｭ励→縺ｮ髢馴囈 */
+  /* 文字との間隔 */
   vertical-align: middle;
-  /* 邵ｦ菴咲ｽｮ隱ｿ謨ｴ */
+  /* 縦位置調整 */
 }
 
 .textarea-1 {
@@ -2796,14 +2796,14 @@ table.formtable-4 p.ag_address {
   margin-left: auto;
 }
 
-/* 縺雁撫縺�粋繧上○繝壹�繧ｸ 莠区･ｭ蛹ｺ蛻�Λ繧ｸ繧ｪ繝懊ち繝ｳ */
+/* お問い合わせページ 事業区分ラジオボタン */
 
 #contact .business-category {
   display: flex;
-  flex-direction: column; /* 邵ｦ荳ｦ縺ｳ */
-  align-items: flex-start; /* 蟾ｦ蟇�○ */
+  flex-direction: column; /* 縦並び */
+  align-items: flex-start; /* 左寄せ */
   width: max-content;
-  gap: 10px; /* 荳贋ｸ九�菴咏區 */
+  gap: 10px; /* 上下の余白 */
 }
 
 #contact .business-category label {
@@ -2846,7 +2846,7 @@ table.formtable-4 p.ag_address {
   position: absolute;
 }
 
-/* 蠖灘�諢丞髄遒ｺ隱阪�繝ｼ繧ｸ */
+/* 当初意向確認ページ */
 p.intention-read {
   font-size: 16px;
   line-height: normal;
@@ -2908,7 +2908,7 @@ ul.intention-list li {
 
 #read>img.catch.sp{display: none;}
 #read>img.catch.pc{display: block;}
-/* 螂醍ｴ���繝代�繝医リ繝ｼ 繝槭う繝壹�繧ｸ */
+/* 契約者・パートナー マイページ */
 
 .mypage-title {
   font-size: 18px;
@@ -2919,9 +2919,9 @@ ul.intention-list li {
   background-color: #E57016;
   border-radius: 30px;
   text-align: center;
-  display: flex; /* 竊� 霑ｽ蜉� */
-  align-items: center; /* 竊� 蝙ら峩荳ｭ螟ｮ謠�∴ */
-  justify-content: center; /* 竊� 豌ｴ蟷ｳ譁ｹ蜷台ｸｭ螟ｮ謠�∴ */
+  display: flex; /* ← 追加 */
+  align-items: center; /* ← 垂直中央揃え */
+  justify-content: center; /* ← 水平方向中央揃え */
   margin: 204px auto 150px;
 }
 
@@ -3207,7 +3207,7 @@ label.mktoLabel.mktoHasWidth {
 }
 
 div.mktoRequiredField label.mktoLabel.mktoHasWidth:after {
-  content: "蠢���";
+  content: "必須";
   width: 34px;
   height: 16px;
   font-size: 10px;
@@ -3528,7 +3528,7 @@ button.mktoButton {
   .pc{display: none;}
   .sp{display: block;}
 
-  /*sp繝｡繝九Η繝ｼ*/
+  /*spメニュー*/
   header.sp {
       height: 60px;
       position: fixed;
@@ -3590,7 +3590,7 @@ button.mktoButton {
   .drawer-nav>ul li a.btn-circle:before{display: block;position: absolute;top:6px;left: -16px;width: 7px;height: 7px;border-radius: 3px;background: #8DA5B2;content: "";}
   .drawer-nav>ul li span.btn-circle:before{display: block;position: absolute;top:6px;left: -16px;width: 7px;height: 7px;border-radius: 3px;background: #8DA5B2;content: "";}
   .drawer-nav>ul li a.btn-arrow:after{content:"" ;display: block;height: 1px;width: 100%;background: #8DA5B2;    position: absolute;bottom: -4px;}
-  .drawer-nav>ul li a.btn-arrow::before{content: "";background-image: url("/assets/img/icon_arrow-58d78bc0.svg");background-repeat: no-repeat;display: block;width: 15px;height: 12px;position: absolute;top: 4px;left: -24px;}
+  .drawer-nav>ul li a.btn-arrow::before{content: "";background-image: url(/img/icon_arrow.svg);background-repeat: no-repeat;display: block;width: 15px;height: 12px;position: absolute;top: 4px;left: -24px;}
   .drawer-nav>ul.etc-nav{margin-top:40px;}
   .drawer-nav>ul.etc-nav>li{}
   .drawer-nav>ul.etc-nav>li>a{font-size: 4vw;}
@@ -3657,7 +3657,7 @@ button.mktoButton {
   }
   #catch{display: flex;
     position: relative;
-    justify-content: center;align-items: center;width: 100%;aspect-ratio:100/50;background-color: transparent;background-image: url("/assets/img/bg_catch_sp-a01f94a2.svg");background-size: 100%;background-position: top;background-repeat: no-repeat;}
+    justify-content: center;align-items: center;width: 100%;aspect-ratio:100/50;background-color: transparent;background-image: url(/img/bg_catch_sp.svg);background-size: 100%;background-position: top;background-repeat: no-repeat;}
   #catch:after {
       content: "";
       width: 100%;
@@ -3700,7 +3700,7 @@ button.mktoButton {
     width: 35px;
     height: 35px;
     display: block;
-    background-image: url("/assets/img/img_aboutplus-a535edbe.svg");
+    background-image: url(/img/img_aboutplus.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -3710,7 +3710,7 @@ button.mktoButton {
   #top-about .about-list>li{
     width: 55%;
     height: auto;
-    background-image: url("/assets/img/bg_about_list-1a9bffb8.svg");
+    background-image: url(/img/bg_about_list.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -3835,7 +3835,7 @@ button.mktoButton {
     content: "";
     width: 13px;
     height: 13px;
-    background: url("/assets/img/icon_plus-f4839cbe.svg");
+    background: url(/img/icon_plus.svg);
     background-repeat: no-repeat;
     top: inherit;
     bottom:-30px ;
@@ -3916,16 +3916,16 @@ button.mktoButton {
     transform: translateY(-50%);
   }
   #top-feature .point0 .content dl.left>dd>ul>li:nth-child(1)::before{
-    background-image: url("/assets/img/img_feature_support0-9c5de734.svg");
+    background-image: url(/img/img_feature_support0.svg);
   }
   #top-feature .point0 .content dl.left>dd>ul>li:nth-child(2)::before{
-    background-image: url("/assets/img/img_feature_support1-a7df9b37.svg");
+    background-image: url(/img/img_feature_support1.svg);
   }
   #top-feature .point0 .content dl.left>dd>ul>li:nth-child(3)::before{
-    background-image: url("/assets/img/img_feature_support2-c6a914de.svg");
+    background-image: url(/img/img_feature_support2.svg);
   }
   #top-feature .point0 .content dl.left>dd>ul>li:nth-child(4)::before{
-    background-image: url("/assets/img/img_feature_support3-e972b533.svg");
+    background-image: url(/img/img_feature_support3.svg);
   }
 
   #top-feature .point0 .content dl.left>dd>ul>li:last-child{
@@ -4530,8 +4530,8 @@ button.mktoButton {
 header.sp-etc {
   height: 60px;
   position: fixed;
-  top: 0;  /* 竊� 霑ｽ蜉� */
-  left: 0; /* 竊� 霑ｽ蜉� */
+  top: 0;  /* ← 追加 */
+  left: 0; /* ← 追加 */
   width: 100%;
   background: rgba(249, 249, 249, 0.2);
   z-index: 1;
@@ -4819,9 +4819,9 @@ header.sp-etc {
 .process {
   display: flex;
   justify-content: center;
-  /* 豌ｴ蟷ｳ譁ｹ蜷代�荳ｭ螟ｮ謠�∴ */
+  /* 水平方向の中央揃え */
   align-items: center;
-  /* 蝙ら峩譁ｹ蜷代�荳ｭ螟ｮ謠�∴ */
+  /* 垂直方向の中央揃え */
   font-weight: 700;
   font-size: 12px;
   color: #E0E6E6;
@@ -4838,9 +4838,9 @@ header.sp-etc {
   content: "";
   position: absolute;
   width: 30px;
-  /* 邱壹�髟ｷ縺輔ｒ隱ｿ謨ｴ */
+  /* 線の長さを調整 */
   height: 2px;
-  /* 邱壹�螟ｪ縺� */
+  /* 線の太さ */
   background-color: #E0E6E6;
   top: 50%;
   left: 100%;
@@ -4861,9 +4861,9 @@ header.sp-etc {
 #contact {
   width: 80%;
   flex-direction: column;
-  /* 邵ｦ荳ｦ縺ｳ */
+  /* 縦並び */
   justify-content: flex-start;
-  /* 蠢�ｦ√↓蠢懊§縺ｦ隱ｿ謨ｴ */
+  /* 必要に応じて調整 */
 }
 
 .formtable-1 {
@@ -4898,39 +4898,39 @@ header.sp-etc {
 
 
 .fixed-top-alert {
-  /* 笆ｼ笆ｼ笆ｼ 菴咲ｽｮ繧貞崋螳壹＠縲∽ｸｭ螟ｮ縺ｫ驟咲ｽｮ縺吶ｋ縺溘ａ縺ｮ險ｭ螳� 笆ｼ笆ｼ笆ｼ */
-  position: fixed;            /* 逕ｻ髱｢縺ｫ菴咲ｽｮ繧貞崋螳壹☆繧� */
-  top: 20px;                  /* 逕ｻ髱｢縺ｮ荳翫°繧峨�霍晞屬 */
-  left: 50%;                  /* 逕ｻ髱｢縺ｮ蟾ｦ縺九ｉ50%縺ｮ菴咲ｽｮ縺ｫ驟咲ｽｮ */
-  transform: translateX(-50%); /* 隕∫ｴ�縺ｮ蟷��蜊雁�縺�縺大ｷｦ縺ｫ縺壹ｉ縺励∽ｸｭ螟ｮ謠�∴繧貞ｮ梧�縺輔○繧� */
-  z-index: 1000;              /* 莉悶�隕∫ｴ�繧医ｊ謇句燕縺ｫ陦ｨ遉ｺ縺吶ｋ */
+  /* ▼▼▼ 位置を固定し、中央に配置するための設定 ▼▼▼ */
+  position: fixed;            /* 画面に位置を固定する */
+  top: 20px;                  /* 画面の上からの距離 */
+  left: 50%;                  /* 画面の左から50%の位置に配置 */
+  transform: translateX(-50%); /* 要素の幅の半分だけ左にずらし、中央揃えを完成させる */
+  z-index: 1000;              /* 他の要素より手前に表示する */
     
-    /* 笆ｼ笆ｼ笆ｼ 隕九◆逶ｮ繧呈紛縺医ｋ險ｭ螳� 笆ｼ笆ｼ笆ｼ */
+    /* ▼▼▼ 見た目を整える設定 ▼▼▼ */
   padding: 1rem;
   border-radius: 0.25rem;
   color: #721c24;
   background-color: #f8d7da;
   border: 1px solid #f5c6cb;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 蠖ｱ繧剃ｻ倥￠縺ｦ豬ｮ縺九�荳翫′繧峨○繧� */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を付けて浮かび上がらせる */
 }
 
 .Required::after {
-  content: "蠢���";
-  /* 謫ｬ莨ｼ隕∫ｴ�縺ｫ陦ｨ遉ｺ縺吶ｋ繝�く繧ｹ繝� */
+  content: "必須";
+  /* 擬似要素に表示するテキスト */
   display: inline-block;
   background-color: #D6753D;
-  /* 閭梧勹濶ｲ */
+  /* 背景色 */
   color: white;
-  /* 譁�ｭ苓牡 */
+  /* 文字色 */
   font-weight: 600;
   font-size: 10px;
-  /* 譁�ｭ励し繧､繧ｺ */
+  /* 文字サイズ */
   padding: 1px 4px;
-  /* 菴咏區 */
+  /* 余白 */
   margin-left: 7px;
-  /* 譁�ｭ励→縺ｮ髢馴囈 */
+  /* 文字との間隔 */
   vertical-align: middle;
-  /* 邵ｦ菴咲ｽｮ隱ｿ謨ｴ */
+  /* 縦位置調整 */
 }
 
 #contact table {
@@ -5029,7 +5029,7 @@ header.sp-etc {
   line-height: 1.5;
 }
 
-/* 繝ｩ繧ｸ繧ｪ繝懊ち繝ｳ繧ｫ繧ｹ繧ｿ繝槭う繧ｺ */
+/* ラジオボタンカスタマイズ */
 
 #contact .radio-3 {
   display: flex;
@@ -5078,7 +5078,7 @@ header.sp-etc {
   margin-bottom: 10px;
 }
 
-/* 蠕捺･ｭ蜩｡謨ｰ逕ｨ繝ｩ繧ｸ繧ｪ繝懊ち繝ｳ */
+/* 従業員数用ラジオボタン */
 #contact .radio-6 {
   display: block;
   width: 100%;
@@ -5112,7 +5112,7 @@ header.sp-etc {
   color: #fff;
 }
 
-/* 繧ｻ繝ｬ繧ｯ繝医�繝�け繧ｹ繧ｫ繧ｹ繧ｿ繝槭う繧ｺ */
+/* セレクトボックスカスタマイズ */
 
 .selectbox-1 {
   display: flex;
@@ -5120,13 +5120,13 @@ header.sp-etc {
   position: relative;
 }
 
-/* 謫ｬ莨ｼ隕∫ｴ�縺ｧ荳芽ｧ偵�SVG逕ｻ蜒上ｒ蜈･繧後ｋ */
+/* 擬似要素で三角のSVG画像を入れる */
 .selectbox-1::after {
   position: absolute;
   right: 10px;
   width: 14px;
   height: 17px;
-  background-image: url("/assets/img/img_triangle-4c69ad57.svg");
+  background-image: url('/img/img_triangle.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -5156,21 +5156,21 @@ header.sp-etc {
   margin-bottom: 20px;
 }
 
-/* 繝医Λ繝悶Ν縺ｫ髢｢縺吶ｋ蜻顔衍繝ｩ繧ｸ繧ｪ繝懊ち繝ｳ */
+/* トラブルに関する告知ラジオボタン */
 
 #contact .trouble-radio {
   display: flex;
-  /* 讓ｪ荳ｦ縺ｳ */
+  /* 横並び */
   justify-content: center;
-  /* 讓ｪ譁ｹ蜷代�荳ｭ螟ｮ蟇�○ */
+  /* 横方向の中央寄せ */
   align-items: center;
-  /* 邵ｦ譁ｹ蜷代�荳ｭ螟ｮ蟇�○ */
+  /* 縦方向の中央寄せ */
   width: max-content;
-  /* 荳ｭ霄ｫ縺ｫ蠢懊§縺溷ｹ� */
+  /* 中身に応じた幅 */
   margin: 0 auto 40px;
-  /* 逕ｻ髱｢荳ｭ螟ｮ縺ｸ驟咲ｽｮ */
+  /* 画面中央へ配置 */
   gap: 50px;
-  /* 繝ｩ繧ｸ繧ｪ繝懊ち繝ｳ縺ｮ髢馴囈 */
+  /* ラジオボタンの間隔 */
 }
 
 #contact .trouble-radio label {
@@ -5253,7 +5253,7 @@ header.sp-etc {
 #contact .trouble-btn-wrap {
   display: block;
   justify-content: center;
-  /* 繝懊ち繝ｳ蜈ｨ菴薙ｒ荳ｭ螟ｮ蟇�○ */
+  /* ボタン全体を中央寄せ */
   align-items: center;
   width: 70%;
 }
@@ -5263,7 +5263,7 @@ header.sp-etc {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* 繧｢繧､繧ｳ繝ｳ+繝�く繧ｹ繝医ｒ繝懊ち繝ｳ蜀�ｸｭ螟ｮ蟇�○ */
+  /* アイコン+テキストをボタン内中央寄せ */
   font-size: 12px;
   color: #fff;
   width: 100%;
@@ -5279,7 +5279,7 @@ header.sp-etc {
   background-color: #7995A3;
 }
 
-/* 繧｢繧､繧ｳ繝ｳ�域闘莨ｼ隕∫ｴ��峨�險ｭ螳� */
+/* アイコン（擬似要素）の設定 */
 #contact .addition-btn::before,
 #contact .delete-btn::before {
   content: "";
@@ -5288,23 +5288,23 @@ header.sp-etc {
   background-repeat: no-repeat;
   display: inline-block;
   margin-right: 14px;
-  /* 繝�く繧ｹ繝医→縺ｮ髢馴囈 */
+  /* テキストとの間隔 */
 }
 
 #contact .addition-btn::before {
   height: 12px;
-  background-image: url("/assets/img/img_plus-mark-24a9d411.svg");
+  background-image: url(/img/img_plus-mark.svg);
 }
 
 #contact .delete-btn::before {
   height: 4px;
-  background-image: url("/assets/img/img_minus-mark-45a290e8.svg");
+  background-image: url(/img/img_minus-mark.svg);
 }
 
 
 #select option[disabled] {
   color: #92A4B1;
-  /* 蛻晄悄縺ｮ縲碁∈謚槭＠縺ｦ縺上□縺輔＞縲阪�譁�ｭ苓牡繧定埋縺�牡縺ｫ */
+  /* 初期の「選択してください」の文字色を薄い色に */
 }
 
 #contact .selectbox-w1 {
@@ -5315,7 +5315,7 @@ header.sp-etc {
   width: 100%;
 }
 
-/* 逕溷ｹｴ譛域律 */
+/* 生年月日 */
 .datebarth-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -5339,7 +5339,7 @@ header.sp-etc {
   margin-right: 5px;
 }
 
-/* 菴乗園讀懃ｴ｢繝懊ち繝ｳ */
+/* 住所検索ボタン */
 
 #contact .address-warp {
   display: flex;
@@ -5359,9 +5359,9 @@ header.sp-etc {
   margin-left: 10px;
 }
 
-/* 蛟倶ｺｺ諠��ｱ菫晁ｭｷ譁ｹ驥昴懈ｬ｡縺ｸ */
+/* 個人情報保護方針〜次へ */
 
-/* 蟾ｦ蟇�○逕ｨ */
+/* 左寄せ用 */
 .pb-next-l {
   display: block;
   margin-top: 0;
@@ -5370,7 +5370,7 @@ header.sp-etc {
   width: 65%;
 }
 
-/* 蜿ｳ蟇�○逕ｨ */
+/* 右寄せ用 */
 .pb-next-r {
   display: block;
   width: 100%;
@@ -5381,7 +5381,7 @@ header.sp-etc {
 
 .wi-65 {
   width: 65%;
-  margin-left: auto; /* 蟾ｦ蛛ｴ縺ｮ菴咏區繧定�蜍輔〒隱ｿ謨ｴ縺励※蜿ｳ蟇�○ */
+  margin-left: auto; /* 左側の余白を自動で調整して右寄せ */
 }
 
 
@@ -5414,7 +5414,7 @@ header.sp-etc {
   cursor: pointer;
 }
 
-/* 繧ｫ繧ｹ繧ｿ繝�繝√ぉ繝�け繝懊ャ繧ｯ繧ｹ */
+/* カスタムチェックボックス */
 #contact .privacy-policy-cb .checkbox-custom {
   width: 20px;
   height: 20px;
@@ -5424,10 +5424,10 @@ header.sp-etc {
   top: 5px;
   display: inline-block;
   pointer-events: none;
-  /* 繧ｯ繝ｪ繝�け繧貞ｦｨ縺偵↑縺� */
+  /* クリックを妨げない */
 }
 
-/* 繝√ぉ繝�け繝槭�繧ｯ */
+/* チェックマーク */
 #contact .privacy-policy-cb input:checked+.checkbox-custom::after {
   position: absolute;
   top: 2px;
@@ -5440,19 +5440,19 @@ header.sp-etc {
   content: '';
 }
 
-/* 譛ｬ譚･縺ｮ繝√ぉ繝�け繝懊ャ繧ｯ繧ｹ繧帝撼陦ｨ遉ｺ */
+/* 本来のチェックボックスを非表示 */
 #contact .privacy-policy-cb input {
   clip-path: inset(50%);
   position: absolute;
 }
 
-/* 谺｡縺ｸ繝懊ち繝ｳ */
+/* 次へボタン */
 .next-btn {
   width: 100%;
   background: #E57016;
   border-radius: 7px;
   text-align: center;
-  padding: 0; /* 竊� padding繧偵Μ繧ｻ繝�ヨ */
+  padding: 0; /* ← paddingをリセット */
 }
 
 .next-btn-4-confirm {
@@ -5460,16 +5460,16 @@ header.sp-etc {
   background: #E57016;
   border-radius: 7px;
   text-align: center;
-  padding: 0; /* 竊� padding繧偵Μ繧ｻ繝�ヨ */
+  padding: 0; /* ← paddingをリセット */
 }
 
 .next-btn button {
-  all: unset; /* 竊� 繝悶Λ繧ｦ繧ｶ縺ｮ繝�ヵ繧ｩ繝ｫ繝医せ繧ｿ繧､繝ｫ繧偵Μ繧ｻ繝�ヨ */
+  all: unset; /* ← ブラウザのデフォルトスタイルをリセット */
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 30px; /* 繝懊ち繝ｳ縺ｮ鬮倥＆隱ｿ謨ｴ�郁�逕ｱ縺ｫ螟画峩OK�� */
+  height: 30px; /* ボタンの高さ調整（自由に変更OK） */
   font-weight: 300;
   font-size: 14px;
   color: #fff;
@@ -5477,12 +5477,12 @@ header.sp-etc {
 }
 
 .next-btn-4-confirm button {
-  all: unset; /* 竊� 繝悶Λ繧ｦ繧ｶ縺ｮ繝�ヵ繧ｩ繝ｫ繝医せ繧ｿ繧､繝ｫ繧偵Μ繧ｻ繝�ヨ */
+  all: unset; /* ← ブラウザのデフォルトスタイルをリセット */
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 30px; /* 繝懊ち繝ｳ縺ｮ鬮倥＆隱ｿ謨ｴ�郁�逕ｱ縺ｫ螟画峩OK�� */
+  height: 30px; /* ボタンの高さ調整（自由に変更OK） */
   font-weight: 300;
   font-size: 14px;
   color: #fff;
@@ -5498,19 +5498,19 @@ header.sp-etc {
 }
 
 .next-btn-blue button {
-  all: unset; /* 竊� 繝悶Λ繧ｦ繧ｶ縺ｮ繝�ヵ繧ｩ繝ｫ繝医せ繧ｿ繧､繝ｫ繧偵Μ繧ｻ繝�ヨ */
+  all: unset; /* ← ブラウザのデフォルトスタイルをリセット */
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 45px; /* 繝懊ち繝ｳ縺ｮ鬮倥＆隱ｿ謨ｴ�郁�逕ｱ縺ｫ螟画峩OK�� */
+  height: 45px; /* ボタンの高さ調整（自由に変更OK） */
   font-weight: 300;
   font-size: 14px;
   color: #fff;
   cursor: pointer;
 }
 
-/* 繝励Λ繝ｳ縺ｮ驕ｸ謚槭�繝ｼ繧ｸ */
+/* プランの選択ページ */
 
 #contact .plan-wrap {
   width: 100%;
@@ -5553,11 +5553,11 @@ st-plan {
 
 .plan-content {
   width: fit-content;
-  /* 荳ｭ霄ｫ縺ｫ蜷医ｏ縺帙◆蟷�↓縺吶ｋ */
+  /* 中身に合わせた幅にする */
   margin: 0 auto;
-  /* 隕ｪ隕∫ｴ�蜀�〒蟾ｦ蜿ｳ荳ｭ螟ｮ縺ｫ驟咲ｽｮ */
+  /* 親要素内で左右中央に配置 */
   text-align: left;
-  /* 譁�ｭ励�蟾ｦ謠�∴ */
+  /* 文字は左揃え */
 }
 
 #contact .radio-4 {
@@ -5687,7 +5687,7 @@ st-plan {
   margin-left: 20px;
 }
 
-/* 豎ｺ貂域婿豕輔Λ繧ｸ繧ｪ繝懊ち繝ｳ */
+/* 決済方法ラジオボタン */
 
 #contact .payment {
   font-weight: 600;
@@ -5757,7 +5757,7 @@ st-plan {
   text-underline-offset: 0.1em;
 }
 
-/* 豎ｺ貂医�繝ｼ繧ｸ繝��繝悶Ν */
+/* 決済ページテーブル */
 
 .formtable-3 {
   margin-bottom: 80px;
@@ -5827,7 +5827,7 @@ td {
   margin: 46px 0 58px;
 }
 
-/* 豎ｺ貂域婿豕暮∈謚槭↓謌ｻ繧九�繧ｿ繝ｳ */
+/* 決済方法選択に戻るボタン */
 .return-btn {
   display: block;
   width: 100%;
@@ -5845,7 +5845,7 @@ td {
   width: 100%;
 }
 
-/* 豎ｺ貂域婿豕暮∈謚槭↓謌ｻ繧九�繧ｿ繝ｳ */
+/* 決済方法選択に戻るボタン */
 .return-btn-4-confirm {
   display: block;
   width: 100%;
@@ -5863,7 +5863,7 @@ td {
   width: 100%;
 }
 
-/* 豎ｺ貂域婿豕輔�繝��繧｢繝��逕ｻ髱｢ */
+/* 決済方法ポップアップ画面 */
 
 #popup {
   font-family: "Zen Kaku Gothic New", sans-serif;
@@ -5946,7 +5946,7 @@ td {
 .popup-table tr.vertical-layout {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* 蟾ｦ蟇�○ */
+  align-items: flex-start; /* 左寄せ */
   margin-bottom: 25px;
   position: relative;
 }
@@ -5963,7 +5963,7 @@ td {
 
 .available-cards {
   display: flex;
-  flex-direction: row; /* 讓ｪ荳ｦ縺ｳ */
+  flex-direction: row; /* 横並び */
 }
 
 .available-cards img {
@@ -6025,13 +6025,13 @@ td {
   margin-top: 30px;
 }
 
-/* 繧｢繧ｳ繝ｼ繝�ぅ繧ｪ繝ｳ */
+/* アコーディオン */
 .toggle {
   display: none;
 }
 
 .toggle-title {
-  /*繧ｿ繧､繝医Ν*/
+  /*タイトル*/
   display: block;
   padding-right: 30px;
 }
@@ -6041,7 +6041,7 @@ td {
 }
 
 .toggle-title::after {
-  /*繧ｿ繧､繝医Ν讓ｪ縺ｮ遏｢蜊ｰ*/
+  /*タイトル横の矢印*/
   content: "";
   width: 12px;
   height: 12px;
@@ -6049,7 +6049,7 @@ td {
   border-right: 1px solid #707070;
   -webkit-transform: rotate(45deg);
   margin-left: 10px;
-  /* 譁�ｭ励→縺ｮ髢馴囈 */
+  /* 文字との間隔 */
   position: absolute;
   top: calc(87% - 15px);
   transform: rotate(135deg);
@@ -6064,7 +6064,7 @@ td {
 }
 
 .acordion-item {
-  /*譛ｬ譁�*/
+  /*本文*/
   font-size: 12px;
   line-height: 20px;
   color: #8DA5B2;
@@ -6076,7 +6076,7 @@ td {
 }
 
 .toggle:checked+.toggle-title+.acordion-item {
-  /*髢矩哩譎�*/
+  /*開閉時*/
   height: auto;
   padding: 20px;
   transition: all .3s;
@@ -6087,7 +6087,7 @@ td {
   top: calc(83% - 3px);
 }
 
-/* 縺顔筏縺苓ｾｼ縺ｿ蜀�ｮｹ縺ｮ遒ｺ隱阪�繝ｼ繧ｸ */
+/* お申し込み内容の確認ページ */
 
 #contact .fw-w6 th {
   font-weight: 600;
@@ -6105,7 +6105,7 @@ td {
   margin-bottom: 40px;
 }
 
-/* PDF縺ｮ蜀�ｮｹ遒ｺ隱阪∝酔諢上メ繧ｧ繝�け繝懊ャ繧ｯ繧ｹ */
+/* PDFの内容確認、同意チェックボックス */
 
 #contact .pdf-consent {
   font-size: 12px;
@@ -6135,7 +6135,7 @@ td {
   line-height: 20px;
 }
 
-/* 繧ｫ繧ｹ繧ｿ繝�繝√ぉ繝�け繝懊ャ繧ｯ繧ｹ */
+/* カスタムチェックボックス */
 #contact .pdf-consent .checkbox-custom {
   width: 16px;
   height: 16px;
@@ -6145,10 +6145,10 @@ td {
   top: 3px;
   display: inline-block;
   pointer-events: none;
-  /* 繧ｯ繝ｪ繝�け繧貞ｦｨ縺偵↑縺� */
+  /* クリックを妨げない */
 }
 
-/* 繝√ぉ繝�け繝槭�繧ｯ */
+/* チェックマーク */
 #contact .pdf-consent-cb input:checked+.checkbox-custom::after {
   position: absolute;
   top: 1px;
@@ -6161,13 +6161,13 @@ td {
   content: '';
 }
 
-/* 譛ｬ譚･縺ｮ繝√ぉ繝�け繝懊ャ繧ｯ繧ｹ繧帝撼陦ｨ遉ｺ */
+/* 本来のチェックボックスを非表示 */
 #contact .pdf-consent-cb input {
   clip-path: inset(50%);
   position: absolute;
 }
 
-/* 逕ｳ縺苓ｾｼ縺ｿ邨檎ｷｯ繝��繝悶Ν */
+/* 申し込み経緯テーブル */
 
 .formtable-4 {
   margin-bottom: 20px;
@@ -6200,27 +6200,27 @@ table.formtable-4 p.ag_address {
 }
 
 
-/* 繝｢繝ｼ繝繝ｫ縺ｨ閭梧勹縺ｮ謖�ｮ� */
+/* モーダルと背景の指定 */
 .modal {
-  position: fixed; /* 霑ｽ蜉� */
+  position: fixed; /* 追加 */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   text-align: center;
-  background: rgba(0,0,0,0.5); /* 騾城℃縺ｮ繧ｫ繝ｳ繝樔ｽ咲ｽｮ菫ｮ豁｣ */
+  background: rgba(0,0,0,0.5); /* 透過のカンマ位置修正 */
   padding: 50px 20px;
   overflow: auto;
   opacity: 0;
   visibility: hidden;
   transition: .3s;
   box-sizing: border-box;
-  display: flex; /* 霑ｽ蜉� */
-  justify-content: center; /* 霑ｽ蜉� */
-  z-index: 9999; /* 莉悶�隕∫ｴ�繧医ｊ蜑埼擇縺ｫ縺吶ｋ */
+  display: flex; /* 追加 */
+  justify-content: center; /* 追加 */
+  z-index: 9999; /* 他の要素より前面にする */
 }
 
-/* 繝｢繝ｼ繝繝ｫ縺ｮ謫ｬ莨ｼ隕∫ｴ�縺ｮ謖�ｮ� */
+/* モーダルの擬似要素の指定 */
 .modal:before{
   content: "";
   display: inline-block;
@@ -6229,13 +6229,13 @@ table.formtable-4 p.ag_address {
   margin-left: -0.2em;
 }
 
-/* 繧ｯ繝ｩ繧ｹ縺瑚ｿｽ蜉�縺輔ｌ縺滓凾縺ｮ謖�ｮ� */
+/* クラスが追加された時の指定 */
 .modal.is-active{
   opacity: 1;
   visibility: visible;
 }
 
-/* 繝｢繝ｼ繝繝ｫ蜀��縺ｮ謖�ｮ� */
+/* モーダル内側の指定 */
 .modal-container{
   position: relative;
   display: inline-block;
@@ -6244,7 +6244,7 @@ table.formtable-4 p.ag_address {
   width: 90%;
 }
 
-/* 繝｢繝ｼ繝繝ｫ繧帝哩縺倥ｋ繝懊ち繝ｳ縺ｮ謖�ｮ� */
+/* モーダルを閉じるボタンの指定 */
 .modal-close{
   position: absolute;
   display: flex;
@@ -6260,7 +6260,7 @@ table.formtable-4 p.ag_address {
   cursor: pointer;
 }
 
-/* 繝｢繝ｼ繝繝ｫ縺ｮ繧ｳ繝ｳ繝�Φ繝�Κ蛻��謖�ｮ� */
+/* モーダルのコンテンツ部分の指定 */
 .modal-content{
   background: #fff;
   text-align: left;
@@ -6269,7 +6269,7 @@ table.formtable-4 p.ag_address {
   box-sizing: border-box;
 }
 
-/* 繝｢繝ｼ繝繝ｫ縺ｮ繧ｳ繝ｳ繝�Φ繝�Κ蛻��繝�く繧ｹ繝医�謖�ｮ� */
+/* モーダルのコンテンツ部分のテキストの指定 */
 .modal-content li,
 .modal-content p{
   font-family: "Zen Kaku Gothic New", serif;
@@ -6293,8 +6293,8 @@ table.formtable-4 p.ag_address {
     transition: 0.3s;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 100%; /* 繧ｹ繝槭�迚医〒縺ｯ蟷�ｒ100%縺ｫ */
-    min-width: unset; /* min-width繧定ｧ｣髯､ */
+    width: 100%; /* スマホ版では幅を100%に */
+    min-width: unset; /* min-widthを解除 */
     cursor: pointer;
 }
 
@@ -6334,17 +6334,17 @@ table.formtable-4 p.ag_address {
   margin: 0;
 	margin-bottom: 20px;
 	font-weight: normal;
-	border-bottom: 4px solid #eee;	/*荳狗ｷ壹�蟷�∫ｷ夂ｨｮ縲∬牡縲ゅ�繝ｼ繧ｹ繧ｫ繝ｩ繝ｼ縺ｧ縺吶ゆｸ九�span縺ｮborder-bottom縺ｨ謨ｰ蟄励ｒ蜷医ｏ縺帙※縺翫￥縲�*/
+	border-bottom: 4px solid #eee;	/*下線の幅、線種、色。ベースカラーです。下のspanのborder-bottomと数字を合わせておく。*/
 }
 
 .modal-title span.uline {
 	display: inline-block;position: relative;
-	border-bottom: 4px solid #0090B0;	/*荳狗ｷ壹�蟷�∫ｷ夂ｨｮ縲∬牡縲ゅい繧ｯ繧ｻ繝ｳ繝医き繝ｩ繝ｼ縺ｧ縺吶ゆｸ翫�main h2縺ｨ謨ｰ蟄励ｒ蜷医ｏ縺帙※縺翫￥縲�*/
-	bottom: -4px;		/*荳九°繧峨�驟咲ｽｮ蝣ｴ謇謖�ｮ壹ゆｸ翫↓縺ゅｋ�偵▽縺ｮborder-bottom縺ｨ驥阪�繧狗ぜ縺ｮ謖�ｮ壹↑縺ｮ縺ｧ縲∵焚蟄励ｒ蜷医ｏ縺帙※縺九ｉ蜀帝�ｭ縺ｫ繝槭う繝翫せ繧偵▽縺代※荳九＆縺��*/
-	padding: 0 20px;	/*荳贋ｸ九∝ｷｦ蜿ｳ縺ｸ縺ｮ菴咏區縲ゅユ繧ｭ繧ｹ繝医�荳｡閼�↓蟆代＠菴呵｣輔ｒ繧ゅ▲縺ｦ邱壹ｒ蠑輔￥縺溘ａ縺ｧ縺吶�*/
+	border-bottom: 4px solid #0090B0;	/*下線の幅、線種、色。アクセントカラーです。上のmain h2と数字を合わせておく。*/
+	bottom: -4px;		/*下からの配置場所指定。上にある２つのborder-bottomと重ねる為の指定なので、数字を合わせてから冒頭にマイナスをつけて下さい。*/
+	padding: 0 20px;	/*上下、左右への余白。テキストの両脇に少し余裕をもって線を引くためです。*/
 }
 
-/* 繧ｵ繝ｳ繧ｯ繧ｹ繝壹�繧ｸ */
+/* サンクスページ */
 
 #contact .thanks-text {
   font-size: 12px;
@@ -6365,7 +6365,7 @@ table.formtable-4 p.ag_address {
   display: none;
 }
 
-/* bonobo縺皮ｴｹ莉玖ｳ�侭繝繧ｦ繝ｳ繝ｭ繝ｼ繝峨�繝ｼ繧ｸ */
+/* bonoboご紹介資料ダウンロードページ */
 .download-title {
   font-size: 12px;
   font-weight: 500;
@@ -6374,16 +6374,16 @@ table.formtable-4 p.ag_address {
   margin: 140px 25px 66px;
 }
 
-/* 繝代�繝医リ繝ｼ蜍滄寔繝壹�繧ｸ */
+/* パートナー募集ページ */
 .ma-center {
   margin: 0 auto;
 }
 
- /* 蜈･蜉帙Λ繝吶Ν蜈ｨ菴薙�荳ｦ縺ｳ隱ｿ謨ｴ */
+ /* 入力ラベル全体の並び調整 */
  .callback-wrap {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* 繝ｩ繝吶Ν繧ｻ繝�ヨ蜷悟｣ｫ縺ｮ髢薙ｂ蠎�￡繧� */
+  gap: 15px; /* ラベルセット同士の間も広げる */
   align-items: flex-start;
 }
 
@@ -6396,7 +6396,7 @@ table.formtable-4 p.ag_address {
 }
 
 .callback-wrap .input-label label {
-  margin-bottom: 4px; /* 繝ｩ繝吶Ν縺ｨinput縺ｮ髢薙↓菴咏區 */
+  margin-bottom: 4px; /* ラベルとinputの間に余白 */
 }
 
 .callback-wrap .ws {
@@ -6418,32 +6418,32 @@ table.formtable-4 p.ag_address {
 }
 
 .discretionary::after {
-  content: "莉ｻ諢�";
-  /* 謫ｬ莨ｼ隕∫ｴ�縺ｫ陦ｨ遉ｺ縺吶ｋ繝�く繧ｹ繝� */
+  content: "任意";
+  /* 擬似要素に表示するテキスト */
   display: inline-block;
   background-color: #A8BAC1;
-  /* 閭梧勹濶ｲ */
+  /* 背景色 */
   color: white;
-  /* 譁�ｭ苓牡 */
+  /* 文字色 */
   font-weight: 600;
   font-size: 10px;
-  /* 譁�ｭ励し繧､繧ｺ */
+  /* 文字サイズ */
   padding: 1px 4px;
-  /* 菴咏區 */
+  /* 余白 */
   margin-left: 7px;
-  /* 譁�ｭ励→縺ｮ髢馴囈 */
+  /* 文字との間隔 */
   vertical-align: middle;
-  /* 邵ｦ菴咲ｽｮ隱ｿ謨ｴ */
+  /* 縦位置調整 */
 }
 
-/* 縺雁撫縺�粋繧上○繝壹�繧ｸ 莠区･ｭ蛹ｺ蛻�Λ繧ｸ繧ｪ繝懊ち繝ｳ */
+/* お問い合わせページ 事業区分ラジオボタン */
 
 #contact .business-category {
   display: flex;
-  flex-direction: column; /* 邵ｦ荳ｦ縺ｳ */
-  align-items: flex-start; /* 蟾ｦ蟇�○ */
+  flex-direction: column; /* 縦並び */
+  align-items: flex-start; /* 左寄せ */
   width: max-content;
-  gap: 10px; /* 荳贋ｸ九�菴咏區 */
+  gap: 10px; /* 上下の余白 */
 }
 
 #contact .business-category label {
@@ -6486,7 +6486,7 @@ table.formtable-4 p.ag_address {
   position: absolute;
 }
 
-/* 蠖灘�諢丞髄遒ｺ隱阪�繝ｼ繧ｸ */
+/* 当初意向確認ページ */
 p.intention-read {
   font-size: 14px;
   line-height: normal;
@@ -6546,7 +6546,7 @@ ul.intention-list li {
   margin: 0 auto;
 }
 
-/* 螂醍ｴ���繝代�繝医リ繝ｼ 繝槭う繝壹�繧ｸ */
+/* 契約者・パートナー マイページ */
 
 .mypage-title {
   font-size: 18px;
@@ -6558,9 +6558,9 @@ ul.intention-list li {
   background-color: #E57016;
   border-radius: 30px;
   text-align: center;
-  display: flex; /* 竊� 霑ｽ蜉� */
-  align-items: center; /* 竊� 蝙ら峩荳ｭ螟ｮ謠�∴ */
-  justify-content: center; /* 竊� 豌ｴ蟷ｳ譁ｹ蜷台ｸｭ螟ｮ謠�∴ */
+  display: flex; /* ← 追加 */
+  align-items: center; /* ← 垂直中央揃え */
+  justify-content: center; /* ← 水平方向中央揃え */
   margin: 100px auto 100px;
 }
 
