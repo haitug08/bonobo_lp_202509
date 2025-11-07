@@ -1,4 +1,4 @@
-const Nav = document.querySelector('header'); 
+const Nav = document.querySelector('header');
 
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
@@ -26,13 +26,13 @@ window.addEventListener("pageshow", function (event) {
 // window.addEventListener('load', () => {
 //   setTimeout(() => {
 //     document.body.classList.remove('is-loading');
-//   }, 50); // 蟆代＠驕�ｻｶ繧貞�繧後ｋ縺ｨ螳牙ｮ�
+//   }, 50); // 少し遅延を入れると安定
 // });
 
 function isMobile() {
-  // 繝ｦ繝ｼ繧ｶ繝ｼ繧ｨ繝ｼ繧ｸ繧ｧ繝ｳ繝医ｒ蜿門ｾ�
+  // ユーザーエージェントを取得
   const userAgent = navigator.userAgent.toLowerCase();
-  // 繧ｹ繝槭�縺九←縺�°繧貞愛螳壹☆繧区ｭ｣隕剰｡ｨ迴ｾ
+  // スマホかどうかを判定する正規表現
   const mobileDevices = /iphone|ipad|ipod|android|blackberry|windows phone|opera mini|iemobile/;
   return mobileDevices.test(userAgent);
 }
@@ -45,13 +45,13 @@ function Timer(ms) {
 
 let flag = 0;
 
-//////////////////////////////////////////////////////////////////////////////// 諷｣諤ｧ繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ
+//////////////////////////////////////////////////////////////////////////////// 慣性スクロール
 const lenis = new Lenis({
-  duration: 0.7, // 繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺ｮ邯咏ｶ壽凾髢�
-  direction: 'vertical', // 譁ｹ蜷�
+  duration: 0.7, // アニメーションの継続時間
+  direction: 'vertical', // 方向
   gestureDirection: 'vertical',
-  // smooth: true, // 繧ｹ繝�繝ｼ繧ｹ繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ縺ｮ譛牙柑繝ｻ辟｡蜉ｹ繧定ｨｭ螳�
-  smoothTouch: false, // 繧ｿ繝�メ繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ譎ゅ�繧ｹ繝�繝ｼ繧ｹ繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ縺ｮ譛牙柑繝ｻ辟｡蜉ｹ繧定ｨｭ螳壹�(繧ｿ繝�メ繝�ヰ繧､繧ｹ譛ｬ譚･縺ｮ貊代ｉ縺九＆繧呈ｨ｡蛟｣縺吶ｋ縺薙→縺ｯ荳榊庄閭ｽ縺ｧ縺ゅｋ縺溘ａ縲√ョ繝輔か繝ｫ繝育┌蜉ｹ)
+  // smooth: true, // スムーススクロールの有効・無効を設定
+  smoothTouch: false, // タッチスクロール時のスムーススクロールの有効・無効を設定。(タッチデバイス本来の滑らかさを模倣することは不可能であるため、デフォルト無効)
   touchMultiplier: 2,
   // scrollBehavior: auto,
 })
@@ -66,17 +66,17 @@ window.addEventListener('wheel', (e) => {
   const current = window.scrollY;
 
   if (current >= scrollMax && e.deltaY > 0) {
-    // 荳九↓蜷代°縺�せ繧ｯ繝ｭ繝ｼ繝ｫ縺梧怙荳矩Κ縺ｫ繝偵ャ繝�
+    // 下に向かうスクロールが最下部にヒット
     e.preventDefault();
-    lenis.scrollTo(scrollMax - 1); // 蟆代＠謌ｻ縺�
+    lenis.scrollTo(scrollMax - 1); // 少し戻す
   }
 }, { passive: false });
 
-//////////////////////////////////////////////////////////////////////////////// 繝吶�繧ｹ繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ
+//////////////////////////////////////////////////////////////////////////////// ベースアニメーション
 const list = document.querySelectorAll(".move")
 list.forEach(function(element, i) {
     gsap.fromTo(
-      list[i], // 繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺輔○繧玖ｦ∫ｴ�
+      list[i], // アニメーションさせる要素
       {opacity: 0,y: 50,},
       {
         opacity: 1,y: 0,duration: 0.6,
@@ -94,7 +94,7 @@ if (isMobile()) {
   const list3 = document.querySelectorAll(".move_normal")
   list3.forEach(function(element, i) {
       gsap.fromTo(
-        list3[i], // 繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺輔○繧玖ｦ∫ｴ�
+        list3[i], // アニメーションさせる要素
         {opacity: 0,},
         {
           opacity: 1,duration: 2,
@@ -111,7 +111,7 @@ if (isMobile()) {
   const list3 = document.querySelectorAll(".move_normal")
   list3.forEach(function(element, i) {
       gsap.fromTo(
-        list3[i], // 繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺輔○繧玖ｦ∫ｴ�
+        list3[i], // アニメーションさせる要素
         {opacity: 0,},
         {
           opacity: 1,duration: 2,
@@ -130,7 +130,7 @@ if (isMobile()) {
   const list3 = document.querySelectorAll(".move_normal2")
   list3.forEach(function(element, i) {
       gsap.fromTo(
-        list3[i], // 繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺輔○繧玖ｦ∫ｴ�
+        list3[i], // アニメーションさせる要素
         {opacity: 0,},
         {
           opacity: 1,duration: 2,
@@ -147,7 +147,7 @@ if (isMobile()) {
   const list3 = document.querySelectorAll(".move_normal2")
   list3.forEach(function(element, i) {
       gsap.fromTo(
-        list3[i], // 繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺輔○繧玖ｦ∫ｴ�
+        list3[i], // アニメーションさせる要素
         {opacity: 0,},
         {
           opacity: 1,duration: 2,
@@ -165,7 +165,7 @@ if (isMobile()) {
 const list3 = document.querySelectorAll(".move_normal3")
 list3.forEach(function(element, i) {
     gsap.fromTo(
-      list3[i], // 繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺輔○繧玖ｦ∫ｴ�
+      list3[i], // アニメーションさせる要素
       {opacity: 0},
       {
         opacity: 1,duration: 1,
@@ -179,10 +179,10 @@ list3.forEach(function(element, i) {
     );
 });
 
-//////////////////////////////////////////////////////////////////////////////// 繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ
+//////////////////////////////////////////////////////////////////////////////// スクロールアニメーション
 window.addEventListener('load', () => {
   gsap.registerPlugin(ScrollTrigger);
-  //////////////////////////////////////////////////////////////////////////////// 蛻晏屓繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ
+  //////////////////////////////////////////////////////////////////////////////// 初回アニメーション
   const TL = gsap.timeline({
   });
   TL.fromTo('.firstSecP1',{opacity: 0,},{opacity: 1, duration: 2,delay:0.5},"start")
@@ -226,7 +226,7 @@ tlsec3.fromTo("#fourthSec",{opacity: 0},{opacity: 1, duration: 0.2,})
 .fromTo(".fifthSecP1",{opacity: 0,y:0,filter: 'blur(30px)',},{opacity: 1,y: 0,duration: 0.6,filter:'blur(0px)',delay:0.6},"go")
 .call(() => {lenis.start();},null,"go")
 
-//// PC縺ｮ譎ゅせ繧ｯ繝ｭ繝ｼ繝ｫ縺励◆繧�
+//// PCの時スクロールしたら
 window.addEventListener("wheel", function (event) {
   if (flag == 1) {
     tlsec.play();
@@ -241,40 +241,40 @@ window.addEventListener("wheel", function (event) {
 
 
 
-//////////////////////////////////////////////////////////////////////////////// 繧ｹ繝槭�縺ｮ蜃ｦ逅�ｒ譖ｸ縺�
+//////////////////////////////////////////////////////////////////////////////// スマホの処理を書く
 
-// 繧ｿ繝��譎ゅ�隱､蜍穂ｽ懊ｒ髦ｲ縺舌◆繧√�繧ｹ繝ｯ繧､繝玲凾縺ｮ蜃ｦ逅�ｒ螳溯｡後＠縺ｪ縺�怙蟆剰ｷ晞屬
+// タップ時の誤動作を防ぐためのスワイプ時の処理を実行しない最小距離
 const minimumDistance = 30
-// 繧ｹ繝ｯ繧､繝鈴幕蟋区凾縺ｮ蠎ｧ讓�
+// スワイプ開始時の座標
 let startX = 0
 let startY = 0
-// 繧ｹ繝ｯ繧､繝礼ｵゆｺ�凾縺ｮ蠎ｧ讓�
+// スワイプ終了時の座標
 let endX = 0
 let endY = 0
 
-// 隗｣隱ｬ竭��夂ｧｻ蜍輔ｒ髢句ｧ九＠縺溷ｺｧ讓吶ｒ蜿門ｾ�
+// 解説①：移動を開始した座標を取得
 window.addEventListener('touchstart', (e) =>  {
   startX = e.touches[0].pageX
   startY = e.touches[0].pageY
 })
 
-// 隗｣隱ｬ竭｡�夂ｧｻ蜍輔＠縺溷ｺｧ讓吶ｒ蜿門ｾ�
+// 解説②：移動した座標を取得
 window.addEventListener('touchmove', (e) =>  {
   endX = e.changedTouches[0].pageX
   endY = e.changedTouches[0].pageY
 })
 
 
-// 隗｣隱ｬ竭｢�夂ｧｻ蜍戊ｷ晞屬縺九ｉ蟾ｦ蜿ｳor荳贋ｸ九�蜃ｦ逅�ｒ螳溯｡�
+// 解説③：移動距離から左右or上下の処理を実行
 window.addEventListener('touchend', (e) =>  {
-  // 繧ｹ繝ｯ繧､繝礼ｵゆｺ�凾縺ｫx霆ｸ縺ｨy霆ｸ縺ｮ遘ｻ蜍暮㍼繧貞叙蠕�
-  // 蟾ｦ繧ｹ繝ｯ繧､繝励↓蟇ｾ蠢懊☆繧九◆繧｀ath.abs()縺ｧ+縺ｫ螟画鋤
+  // スワイプ終了時にx軸とy軸の移動量を取得
+  // 左スワイプに対応するためMath.abs()で+に変換
   const distanceX = Math.abs(endX - startX)
   const distanceY = Math.abs(endY - startY)
   
-  // 荳贋ｸ九�繧ｹ繝ｯ繧､繝苓ｷ晞屬縺ｮ譁ｹ縺悟ｷｦ蜿ｳ繧医ｊ髟ｷ縺� && 蟆上＆縺ｪ繧ｹ繝ｯ繧､繝励�讀懃衍縺励↑縺�ｈ縺�↓縺吶ｋ
+  // 上下のスワイプ距離の方が左右より長い && 小さなスワイプは検知しないようにする
   if (distanceX < distanceY && distanceY > minimumDistance) {
-    // 繧ｹ繝ｯ繧､繝怜ｾ後�蜍穂ｽ�
+    // スワイプ後の動作
     if (flag == 1) {
       tlsec.play();
     }
