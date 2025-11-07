@@ -10,7 +10,7 @@ a:hover{opacity: 0.8;}
 .btn-secondary{background: #8DA5B2;color: #fff;}
 .pc{display: block;}
 .sp{display: none;}
-
+     
 /*nav*/
 .follow-nav {position: fixed;z-index: 99;top: 0; left: 0;width: 100%;height: 60px;color:#8DA5B2;text-align: center;transition: top 0.3s ease-in-out;display: flex;align-items: center;background: #fff;}
 .follow-nav.show {top: 0;}
