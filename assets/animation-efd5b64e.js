@@ -1,4 +1,4 @@
-const Nav = document.querySelector('header');
+const Nav = document.querySelector('header'); 
 
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
