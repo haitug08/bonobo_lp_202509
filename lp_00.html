@@ -85,6 +85,23 @@
   border-bottom: 3px solid #9c9c9c;
   transform: rotate(-45deg);
 }
+.table-scroll{
+  overflow: auto; /*スクロールさせる*/
+  white-space: nowrap; /*文字の折り返しを禁止*/
+  width:200px; /*今回の設置を分かりやすくするためワザと狭い幅を指定。本来は不必要な指定です。*/
+}
+
+/* 以下、スクロールバーを追加 */
+.table-scroll::-webkit-scrollbar{　　
+ height: 5px;
+}
+.table-scroll::-webkit-scrollbar-track{
+ background: #333;
+}
+.table-scroll::-webkit-scrollbar-thumb {
+ background: #999;
+}
+  
 </style>
 <!-- ライトプラン対応 CSS追加-->    
 
@@ -175,6 +192,7 @@
 <span class="uline">個人事業主</span>
 </h2>
 <p style="overflow: hidden;"></p>
+<div class="table-scroll">  
 <table class="plan-table">
   <tbody>
     <tr>
@@ -236,6 +254,7 @@
     </tr>
   </tbody>
 </table>
+</div>  
 <p><small>※ライトプランは報酬金・日当・実費が不担保（補償対象外）となります。<br>※個人事業主の場合、法務チャット相談をご利用いただくことはできません。</small></p>  
 </section>
 </div>
