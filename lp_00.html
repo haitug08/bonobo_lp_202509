@@ -96,7 +96,14 @@
     border-radius: 7px;
     background: #00B3C6;
 }
-
+#plan .plan-table-wrap {
+  overflow-x: scroll;
+}
+#plan .plan-table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
   
 @media screen and (max-width:480px) {
 #plan .plan-box {
@@ -199,6 +206,7 @@
 <span class="uline">個人事業主</span>
 </h2>
 <p style="overflow: hidden;"></p>
+<div class="plan-table-wrap">  
   <table class="plan-table">
   <tbody>
     <tr>
@@ -260,7 +268,7 @@
     </tr>
   </tbody>
 </table>
-
+</div>
 <p><small>※ライトプランは報酬金・日当・実費が不担保（補償対象外）となります。<br>
   ※個人事業主の場合、法務チャット相談をご利用いただくことはできません。<br>
   ※払込回数が年払の場合、月払の保険料の12か月分となります。</small></p>  
