@@ -47,10 +47,10 @@
 
 <!-- ライトプラン対応 CSS追加-->    
 <style>
-.plan-table tr {
+#plan .plan-table tr {
   border-bottom: 5px solid #ffffff;
 }
-.plan-table th {
+#plan .plan-table th {
   color: #ffffff;
   font-weight: bold;
   padding: 10px 20px;
@@ -59,22 +59,22 @@
   text-align: center;
   border-left: 5px solid #ffffff;
 }
-.plan-table td {
+#plan .plan-table td {
   padding: 10px 30px;
   background-color: #f6f6f6;
   border-left: 5px solid #ffffff;
   font-size: 14px;
 }
-.plan-check ul {
+#plan .plan-check ul {
   list-style-type: none;
 }
-.plan-check li {
+#plan .plan-check li {
   position: relative;
   line-height: 1.8;
   margin: 0.1em 0;
   font-size: 14px;
 }
-.plan-check li::after {
+#plan .plan-check li::after {
   content: '';
   display: block;
   position: absolute;
@@ -86,17 +86,17 @@
   border-bottom: 3px solid #9c9c9c;
   transform: rotate(-45deg);
 }
-.plan-box {
+#plan .plan-box {
     display: flex;
     margin-top: 50px;
 }
   
 @media screen and (max-width:480px) {
-.plan-box {
+#plan .plan-box {
     display: block;
     margin-top: 20px;
 }
-.modal-button{
+#plan .modal-button{
     margin-top: auto;
 }
   
@@ -165,7 +165,7 @@
 <section id="top-feature" class="dark-section">
 
 <!-- ライトプラン対応 -->  
-<section class="inner">
+<section class="inner" id="plan">
     <h2 class="top-header zom move_normal"><img src="https://asiro-ssi.com/img/img_logo_white.svg" alt="bonobo">が選ばれる理由<span class="font-tenor">3.</span></h2>
     <p class="move_normal">業界で最もシンプルなプラン設計</p>
     <div class="point2 point move_normal">
